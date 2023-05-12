@@ -9,12 +9,9 @@ import com.ajcordenete.domain.models.User
 data class UserDB(
     @PrimaryKey
     var uid: String = "",
-    @ColumnInfo(name = "full_name")
+    @ColumnInfo(name = "name")
     var fullName: String? = "",
-    @ColumnInfo(name = "first_name")
-    var firstName: String? = "",
-    @ColumnInfo(name = "last_name")
-    var lastName: String? = "",
+    @ColumnInfo(name = "email")
     var email: String? = "",
 ) {
 
@@ -26,8 +23,6 @@ data class UserDB(
                 return UserDB(
                     uid = uid,
                     fullName = fullName,
-                    firstName = firstName,
-                    lastName = lastName,
                     email = email
                 )
             }
@@ -38,8 +33,6 @@ data class UserDB(
                 return User(
                     uid = uid,
                     fullName = fullName.orEmpty(),
-                    firstName = firstName.orEmpty(),
-                    lastName = lastName.orEmpty(),
                     email = email.orEmpty()
                 )
             }
