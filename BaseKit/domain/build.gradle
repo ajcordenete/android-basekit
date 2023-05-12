@@ -1,13 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
     id 'kotlin-android'
-    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
-    namespace 'com.ajcordenete.local'
+    namespace 'com.ajcordenete.domain'
     compileSdk Android.compileSdkVersion
 
     defaultConfig {
@@ -34,20 +34,8 @@ android {
 }
 
 dependencies {
-    implementation project(":domain")
-
-    // Local storage
-    implementation Libs.roomRuntime
-    implementation Libs.roomKtx
-    annotationProcessor Libs.roomCompiler
-    kapt Libs.roomCompiler
-
-    implementation Libs.sqlCipher
-    implementation Libs.sqlite
-
-    //Hilt
-    implementation Libs.hiltAndroid
-    kapt Libs.hiltCompiler
+    implementation Libs.coreKtx
+    implementation Libs.kotlinStdLib
 
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit

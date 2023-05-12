@@ -13,6 +13,9 @@ abstract class UserDao: BaseDao<UserDB>  {
     @Query("SELECT * FROM ${UserDB.USER_TABLE_NAME} LIMIT 1")
     abstract suspend fun getUser(): UserDB?
 
+    @Query("SELECT * FROM ${UserDB.USER_TABLE_NAME}")
+    abstract suspend fun getUsers(): List<UserDB>?
+
     @Query("DELETE FROM ${UserDB.USER_TABLE_NAME}")
     abstract suspend fun deleteUsers()
 

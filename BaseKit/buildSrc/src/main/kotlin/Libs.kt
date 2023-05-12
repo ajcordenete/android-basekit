@@ -5,6 +5,9 @@ object Libs {
     const val materialLib = "com.google.android.material:material:${Versions.materialVersion}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
 
+    //Kotlin
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinStdLibVersion}"
+
     //Dependency Injection
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
