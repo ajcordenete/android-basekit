@@ -2,7 +2,6 @@ package com.ajcordenete.network
 
 import android.content.Context
 import android.content.Intent
-import com.ajcordenete.domain.BuildConfig
 import com.ajcordenete.network.feature.ApiService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

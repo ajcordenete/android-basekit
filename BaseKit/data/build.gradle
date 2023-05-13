@@ -3,10 +3,11 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
-    namespace 'com.ajcordenete.network'
+    namespace 'com.ajcordenete.data'
     compileSdk Android.compileSdkVersion
 
     defaultConfig {
@@ -33,11 +34,9 @@ android {
 }
 
 dependencies {
-    implementation Libs.retrofit
-    implementation Libs.retrofitConverterGson
-    implementation Libs.retrofitConverterScalars
-    implementation Libs.okhttp
-    implementation Libs.okhttpLoggingInterceptor
+    implementation project(":domain")
+    implementation project(":local")
+    implementation project(":network")
 
     //Hilt
     implementation Libs.hiltAndroid

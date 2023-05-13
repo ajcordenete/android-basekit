@@ -1,8 +1,8 @@
 package com.ajcordenete.network.feature.user
 
-import com.ajcordenete.domain.models.User
+import com.ajcordenete.network.feature.user.models.UserDTO
 
 interface UserRemoteSource {
 
-    suspend fun getUsers(): Result<List<User>>
+    suspend fun getUsers(): Result<List<UserDTO>>
 }

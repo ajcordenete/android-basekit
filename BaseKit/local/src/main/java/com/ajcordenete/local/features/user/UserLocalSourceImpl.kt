@@ -12,6 +12,10 @@ class UserLocalSourceImpl @Inject constructor(
         userDao.insert(userDB)
     }
 
+    override suspend fun insertUsers(usersDB: List<UserDB>) {
+        userDao.insert(usersDB.toMutableList())
+    }
+
     override suspend fun getAllUsers(): List<UserDB> {
         return userDao.getUsers().orEmpty()
     }
