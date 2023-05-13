@@ -29,7 +29,10 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun updateUsersFromRemote(): List<User> {
         val resultUsers = userRemoteSource.getUsers()
         return if(resultUsers.isSuccess) {
-            val users = resultUsers.get()
+            val users = resultUsers.get().map { userDTO ->
+                userDTO.asDomain()
+            }
+
             //update local cache
             insertUsers(users)
 

@@ -33,8 +33,6 @@ android {
 }
 
 dependencies {
-    implementation project(':domain')
-
     implementation Libs.retrofit
     implementation Libs.retrofitConverterGson
     implementation Libs.retrofitConverterScalars
