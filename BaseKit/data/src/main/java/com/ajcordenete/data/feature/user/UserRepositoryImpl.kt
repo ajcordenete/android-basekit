@@ -1,10 +1,10 @@
 package com.ajcordenete.data.feature.user
 
-import com.ajcordenete.domain.error
+import com.ajcordenete.data.core.asDomain
+import com.ajcordenete.data.core.asEntity
 import com.ajcordenete.domain.get
 import com.ajcordenete.domain.models.User
 import com.ajcordenete.local.features.user.UserLocalSource
-import com.ajcordenete.local.features.user.models.UserDB
 import com.ajcordenete.network.feature.user.UserRemoteSource
 import java.lang.Exception
 import javax.inject.Inject
@@ -17,8 +17,8 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun getUsers(): Result<List<User>> {
         return try {
             val users = userLocalSource.getAllUsers()
-            Result.success(users.map {
-                UserDB.toDomain(it)
+            Result.success(users.map { userDB ->
+                userDB.asDomain()
             })
         } catch (e: Exception) {
             Result.failure(e)
@@ -41,8 +41,8 @@ class UserRepositoryImpl @Inject constructor(
 
     private suspend fun insertUsers(users: List<User>) {
         userLocalSource.insertUsers(
-            users.map {
-                UserDB.fromDomain(it)
+            users.map { user ->
+                user.asEntity()
             }
         )
     }

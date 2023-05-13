@@ -34,8 +34,6 @@ android {
 }
 
 dependencies {
-    implementation project(":domain")
-
     // Local storage
     implementation Libs.roomRuntime
     implementation Libs.roomKtx
