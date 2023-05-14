@@ -54,6 +54,8 @@ dependencies {
     androidTestImplementation Libs.androidxTestJunit
     androidTestImplementation Libs.espressoCore
 
+    implementation Libs.timber
+
     //Hilt
     implementation Libs.hiltAndroid
     kapt Libs.hiltCompiler

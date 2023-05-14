@@ -10,6 +10,9 @@ object Versions {
 
     const val hiltVersion = "2.44"
 
+    // Timber
+    const val timberVersion = "5.0.1"
+
     const val navigationVersion = "2.5.3"
 
     const val retrofitVersion = "2.9.0"

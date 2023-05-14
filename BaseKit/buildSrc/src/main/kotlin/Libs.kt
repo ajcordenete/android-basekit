@@ -13,6 +13,9 @@ object Libs {
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
 
+    // Timber
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+
     //Navigation
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
     const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"

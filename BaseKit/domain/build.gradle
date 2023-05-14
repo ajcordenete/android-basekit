@@ -36,6 +36,7 @@ android {
 dependencies {
     implementation Libs.coreKtx
     implementation Libs.kotlinStdLib
+    api Libs.timber
 
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit

@@ -3,6 +3,7 @@ package com.ajcordenete.basekit.home
 import android.os.Bundle
 import android.view.View
 import com.ajcordenete.basekit.R
+import com.ajcordenete.common.R as commonR
 import com.ajcordenete.basekit.databinding.FragmentHomeBinding
 import com.ajcordenete.common.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,7 +21,7 @@ class FragmentHome: BaseFragment<FragmentHomeBinding>() {
     private fun setUpToolbar() {
         enableToolbarHomeIndicator(
             binding.toolbar.toolbarView,
-            getString(com.ajcordenete.common.R.string.home)
+            getString(commonR.string.home)
         )
     }
 }
