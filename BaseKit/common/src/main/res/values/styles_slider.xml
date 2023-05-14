@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Baseplate.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="trackHeight">4dp</item>
+        <item name="trackColorActive">@color/slider_track_tint_active</item>
+        <item name="trackColorInactive">@color/slider_track_tint_inactive</item>
+        <item name="thumbColor">@color/slider_thumb_tint</item>
+    </style>
+</resources>

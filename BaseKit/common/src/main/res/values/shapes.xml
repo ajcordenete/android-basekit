@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region Generic Shapes  -->
+    <!-- Default shape for small components (button, chip, bottom sheet, fab, etc. You can override this in theme overlays). -->
+    <style name="ShapeAppearance.Baseplate.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusButton</item>
+    </style>
+
+    <!-- Default shape for small components (card, dialog, etc. You can override this in theme overlays). -->
+    <style name="ShapeAppearance.Baseplate.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusCard</item>
+    </style>
+
+    <!-- Default shape for small components (card, dialog, etc. You can override this in theme overlays). -->
+    <style name="ShapeAppearance.Baseplate.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusBottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Baseplate.Round" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.Baseplate.Rectangle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region View Specific Shapes  -->
+    <style name="ShapeAppearance.Baseplate.Input" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusInput</item>
+    </style>
+
+    <style name="ShapeAppearance.Baseplate.Button" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusButton</item>
+    </style>
+
+    <style name="ShapeAppearance.Baseplate.Card" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusCard</item>
+    </style>
+
+    <style name="ShapeAppearance.Baseplate.BottomSheet" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/radiusBottomSheet</item>
+    </style>
+    <!-- endregion -->
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    WARNING: Please avoid referencing colors from here.
+    Please stick to what's provided in the stylesheet found in `variables_colors.xml` file.
+
+    For more info, please refer here:
+    https://paper.dropbox.com/doc/Android-Theming-Styling-BKBsTJLN_t8L40ghRt5ks_0oAg-xc6Ef3EcWJGBDRpZ47pIn#:h2=Color-References
+    -->
+    <color name="semi_white">#EFEFEF</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="butterfly_bush">#5A489B</color>
+    <color name="black_50">#CC000000</color>
+    <color name="black_30">#80000000</color>
+    <color name="cerulean_blue">#2C66D5</color>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Variables.Dimensions" parent="Variables.Root">
+        <item name="screenMargin">16dp</item>
+        <item name="radiusButton">8dp</item>
+        <item name="radiusCard">8dp</item>
+        <item name="radiusBottomSheet">16dp</item>
+        <item name="radiusInput">8dp</item>
+    </style>
+</resources>

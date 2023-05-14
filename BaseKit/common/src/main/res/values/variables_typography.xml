@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Variables.Typography" parent="Variables.Dimensions">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!--
+        NOTE: Typography deals per character basis AND not the entire line of text.
+        Text Color & Line Height does not apply in here. Add them to `styles.xml`
+    -->
+    <style name="TextAppearance.LargeTitle" parent="">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Title1" parent="">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Title2" parent="">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Title3" parent="">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Headline" parent="">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Body" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Body.Medium">
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="TextAppearance.Callout" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Subheadline" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Subheadline.Medium">
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="TextAppearance.Footnote" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Caption" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Caption.Semibold">
+        <item name="fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="TextAppearance.NavigationLabel" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!--  region Line Height  -->
+    <dimen name="line_height_large_title">41dp</dimen>
+    <dimen name="line_height_title1">34dp</dimen>
+    <dimen name="line_height_title2">28dp</dimen>
+    <dimen name="line_height_title3">24dp</dimen>
+    <dimen name="line_height_headline">22dp</dimen>
+    <dimen name="line_height_body">22dp</dimen>
+    <dimen name="line_height_callout">21dp</dimen>
+    <dimen name="line_height_subheadline">20dp</dimen>
+    <dimen name="line_height_footnote">18dp</dimen>
+    <dimen name="line_height_caption">13dp</dimen>
+    <dimen name="line_height_navigation_label">12dp</dimen>
+    <!--  endregion  -->
+</resources>
