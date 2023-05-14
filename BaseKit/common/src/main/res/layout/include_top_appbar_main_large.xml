@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarView"
+            style="@style/Styles.TopAppBar.Main.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:menu="@menu/menu_filter"
+            tools:title="Title" />
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>
