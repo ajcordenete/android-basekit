@@ -6,6 +6,7 @@ object Versions {
     const val materialVersion = "1.5.0"
     const val constraintLayoutVersion = "2.1.4"
     const val kotlinStdLibVersion = "1.6.10"
+    const val activityKtxVersion = "1.7.1"
 
     const val hiltVersion = "2.44"
 

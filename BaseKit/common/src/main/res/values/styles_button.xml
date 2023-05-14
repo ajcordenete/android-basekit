@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Styles.Button.Primary" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Button</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Button</item>
 
         <item name="android:textAppearance">@style/TextAppearance.Headline</item>
         <item name="textAllCaps">?attr/buttonsCapitalized</item>
@@ -17,7 +17,7 @@
     </style>
 
     <style name="Styles.Button.Secondary" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Button</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Button</item>
         <item name="android:textAppearance">@style/TextAppearance.Headline</item>
         <item name="textAllCaps">?attr/buttonsCapitalized</item>
 
@@ -32,7 +32,7 @@
     </style>
 
     <style name="Styles.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Button</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Button</item>
         <item name="android:textAppearance">@style/TextAppearance.Headline</item>
         <item name="textAllCaps">?attr/buttonsCapitalized</item>
 
@@ -78,7 +78,7 @@
     </style>
 
     <style name="Styles.Button.Primary.BottomFull">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Rectangle</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Rectangle</item>
 
         <item name="android:paddingVertical">24dp</item>
     </style>

@@ -15,7 +15,7 @@
         <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
         <item name="hintTextColor">?attr/colorPrimaryFull</item>
 
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Input</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
     </style>
 
     <style name="Styles.Input.TextInputLayout.Line" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
@@ -31,7 +31,7 @@
         <item name="boxStrokeColor">@color/input_line_box_stroke_color</item>
         <item name="strokeColor">?attr/colorPrimaryFull</item>
 
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Input</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
     </style>
 
     <style name="Styles.Input.TextInputLayout.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -46,7 +46,7 @@
         <item name="boxStrokeColor">@color/input_outlined_box_stroke_color</item>
         <item name="strokeColor">?attr/colorPrimaryFull</item>
 
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Input</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
     </style>
 
 
@@ -94,7 +94,7 @@
         <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
         <item name="hintTextColor">?attr/colorPrimaryFull</item>
 
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Input</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
     </style>
 
     <!--  region Input ThemeOverlays  -->

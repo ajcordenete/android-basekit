@@ -3,7 +3,7 @@
 
     <style name="Styles.Card" parent="Widget.MaterialComponents.CardView">
         <item name="materialThemeOverlay">
-            @style/ThemeOverlay.Baseplate.ElevationOverlayDisabled
+            @style/ThemeOverlay.BaseKit.ElevationOverlayDisabled
         </item>
 
         <item name="android:clickable">true</item>
@@ -13,7 +13,7 @@
     </style>
 
     <!--  region Theme Overlays  -->
-    <style name="ThemeOverlay.Baseplate.ElevationOverlayDisabled" parent="">
+    <style name="ThemeOverlay.BaseKit.ElevationOverlayDisabled" parent="">
         <item name="elevationOverlayEnabled">false</item>
     </style>
     <!--  endregion  -->

@@ -1,4 +1,4 @@
-package com.ajcordenete.common
+package com.ajcordenete.common.base
 
 import android.os.Bundle
 import androidx.annotation.ColorRes
@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.ajcordenete.common.R
 import com.ajcordenete.common.ext.setVisible
 
 abstract class BaseActivity<B: ViewDataBinding>: AppCompatActivity() {

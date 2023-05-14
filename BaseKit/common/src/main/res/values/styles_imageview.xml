@@ -2,6 +2,6 @@
 <resources>
 
     <style name="Styles.ImageView.Round" parent="">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Baseplate.Round</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Round</item>
     </style>
 </resources>
