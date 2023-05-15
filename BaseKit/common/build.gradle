@@ -39,11 +39,17 @@ android {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(":domain")
     implementation Libs.coreKtx
     implementation Libs.activityKtx
     implementation Libs.appCompat
     implementation Libs.materialLib
     implementation Libs.constraintLayout
+
+    // Glide
+    implementation Libs.glide
+    implementation Libs.glideCompiler
 
     // Kotlin
     implementation Libs.navigationFragmentKtx

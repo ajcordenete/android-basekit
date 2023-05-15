@@ -42,20 +42,15 @@ android {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":data")
     implementation project(":common")
 
-    implementation Libs.coreKtx
-    implementation Libs.appCompat
-    implementation Libs.materialLib
-    implementation Libs.constraintLayout
     implementation Libs.splashScreen
 
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit
     androidTestImplementation Libs.espressoCore
-
-    implementation Libs.timber
 
     //Hilt
     implementation Libs.hiltAndroid
@@ -73,10 +68,6 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation Libs.navigationCompose
-
-    // Glide
-    implementation Libs.glide
-    implementation Libs.glideCompiler
 
     // Coroutines
     implementation Libs.coroutinesCore

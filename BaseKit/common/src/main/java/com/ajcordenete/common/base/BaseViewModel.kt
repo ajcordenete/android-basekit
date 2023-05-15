@@ -3,11 +3,13 @@ package com.ajcordenete.common.base
 import android.os.Bundle
 import androidx.annotation.CallSuper
 import androidx.lifecycle.ViewModel
+import com.ajcordenete.domain.core.BaseDispatcherProvider
+import com.ajcordenete.domain.core.DispatcherProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 
 abstract class BaseViewModel: ViewModel() {
 
-    //var dispatchers: BaseDispatcherProvider = DispatcherProvider
+    var dispatchers: BaseDispatcherProvider = DispatcherProvider
 
     /**
      * True when UI hasn't called ViewModel.onCreate yet.
