@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ScrollableViewPager">
+        <attr name="canScroll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="etv_read_more_max_lines" format="integer" />
+        <attr name="etv_read_more_collapsed_text" format="string" />
+        <attr name="etv_read_more_expand_text" format="string" />
+        <attr name="etv_read_more_text_color" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PinEntryEditText">
+        <attr name="pinAnimationType" format="enum">
+            <enum name="popIn" value="0" />
+            <enum name="fromBottom" value="1" />
+            <enum name="none" value="-1" />
+        </attr>
+        <attr name="pinCharacterMask" format="string" />
+        <attr name="pinRepeatedHint" format="string" />
+        <attr name="pinLineStroke" format="dimension" />
+        <attr name="pinLineStrokeSelected" format="dimension" />
+        <attr name="pinCharacterSpacing" format="dimension" />
+        <attr name="pinTextBottomPadding" format="dimension" />
+        <attr name="pinLineColors" format="color" />
+        <attr name="pinBackgroundDrawable" format="reference" />
+        <attr name="pinBackgroundIsSquare" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CompoundNavigationButton">
+        <attr name="navigationButtonLeftIcon" format="reference" />
+        <attr name="navigationButtonRightIcon" format="reference" />
+        <attr name="navigationButtonTitle" format="string" />
+        <attr name="navigationButtonDescription" format="string" />
+        <attr name="navigationButtonRightLabel" format="string" />
+    </declare-styleable>
+
+    <!-- CUSTOM THEME ATTRIBUTES  -->
+
+    <!--  region Variables  -->
+    <attr name="colorPrimaryFull" format="color" />
+    <attr name="colorPrimaryShade1" format="color" />
+    <attr name="colorPrimaryShade2" format="color" />
+
+    <attr name="colorSecondaryFull" format="color" />
+
+    <attr name="colorAlertWarning" format="color" />
+    <attr name="colorAlertError" format="color" />
+    <attr name="colorAlertSuccess" format="color" />
+
+    <attr name="colorGreyInactive" format="color" />
+    <attr name="colorGreyBorderDivider" format="color" />
+
+    <attr name="colorBackground" format="color" />
+    <attr name="colorSheet" format="color" />
+
+    <attr name="colorOnLightRegular" format="color" />
+    <attr name="colorOnLightSecondary" format="color" />
+    <attr name="colorOnLightTertiary" format="color" />
+
+    <attr name="colorOnAlertError" format="color" /> <!-- Color to be used on top of color alert error -->
+    <attr name="colorOnAlertWarning" format="color" /> <!-- Color to be used on top of color warning -->
+    <attr name="colorOnAlertSuccess" format="color" /> <!-- Color to be used on top of color success -->
+
+    <attr name="screenMargin" format="dimension" />
+
+    <attr name="buttonsCapitalized" format="boolean" />
+    <attr name="rippleColor" format="color" />
+
+    <attr name="radiusButton" format="dimension" />
+    <attr name="radiusCard" format="dimension" />
+    <attr name="radiusBottomSheet" format="dimension" />
+    <attr name="radiusInput" format="dimension" />
+    <!--  endregion  -->
+
+</resources>

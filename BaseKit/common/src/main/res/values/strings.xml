@@ -1,0 +1,161 @@
+<resources>
+    <string name="full_name">Full name</string>
+    <string name="password">Password</string>
+    <string name="privacy_policy">By signing up, you agree to our terms of service and that you have read our privacy policy.</string>
+    <string name="auth_privacy_policy">By continuing you agree to our Terms of Service and Privacy Policy.</string>
+    <string name="email_address">Email address</string>
+    <string name="country">Country</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="email_address_caps">Email Address</string>
+    <string name="email_must_not_be_empty">Email must not be empty</string>
+    <string name="logout">Logout</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="generic_error">Oops, something went wrong. Please try again later. If the problem persists, please contact us.</string>
+    <string name="generic_error_short">Oops, something went wrong.</string>
+    <string name="hide">Hide</string>
+    <string name="continue_string">Continue</string>
+
+    <!-- Avoid renaming the application_name otherwise our template system will break -->
+    <string name="app_name">Your App</string>
+    <string name="cancel">Cancel</string>
+    <string name="take_a_photo">Take a Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="invalid_file">Invalid File</string>
+    <string name="notifications">Notifications</string>
+    <string name="comment_feed_format">%d comments</string>
+    <string name="reply">Reply</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change">Change</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="yes">Yes</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="na">N/A</string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="delete">Delete</string>
+
+    <string name="app_description">Description of what the app does and why you should join.</string>
+    <string name="landing_description">Enter your email or phone number to sign into your account. If you don’t have one we will create one for you.</string>
+    <string name="whats_your_email">Your Email</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="continue_to_sign_in">Continue to Sign in</string>
+    <string name="forgot_password_description">Enter your email to receive a code to reset your password.</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="no_verification_code">Didn’t receive a code?</string>
+    <string name="new_password">New Password</string>
+    <string name="continue_with_email">Continue with Email</string>
+    <string name="continue_with_phone">Continue with Phone</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="check_account_subtitle">If you don’t already have an account, we will create one for you.</string>
+    <string name="create_password_subtitle">Let’s create your password for</string>
+    <string name="name_subtitle">What should we call you?</string>
+    <string name="welcome_login_subtitle">Enter password to log into</string>
+    <string name="new_password_subtitle">Enter your new password. It must include a minimum of 8 characters.</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="step_1">Step 1</string>
+    <string name="step_2">Step 2</string>
+    <string name="step_3">Step 3</string>
+    <string name="step_4">Step 4</string>
+    <string name="walkthrough_description">Description of what the app does and why you should use it</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="upload_a_profile_photo_for_others_to_recognise_you">Upload a profile photo for others to recognise you!</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    <string name="subscribe_now_description">Subscribe to this app and you will get what you want!</string>
+    <string name="subscription_plan_details">1 month free, then $15.99/month</string>
+    <string name="try_1_month_free">Try 1 month free</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="create_password">Create a Password</string>
+    <string name="username">Username</string>
+    <string name="sign_in_with_social">Sign in with social</string>
+    <string name="enter_email_or_number">Enter email or number</string>
+    <string name="phone_number_format">+%s</string>
+
+    <!--  Account Screen  -->
+    <string name="account">Account</string>
+    <string name="edit_profile_description">Update your personal information</string>
+    <string name="about">About</string>
+    <string name="about_description">Update your personal information</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="account_settings_description">Update your personal information</string>
+
+    <!--  Edit Profile  -->
+    <string name="save">Save</string>
+    <string name="add_a_description">Add a description…</string>
+    <string name="description_exceeds_maximum_format">Description must not exceed %1$d characters.</string>
+
+    <!--  Verify Password  -->
+    <string name="verify_password">Verify Password</string>
+    <string name="verify_password_for_email_description">Enter password to change your email address</string>
+    <string name="verify_password_for_mobile_description">Enter password to change your mobile number</string>
+    <string name="verify_password_for_delete_account_description">Enter password to delete your account</string>
+    <string name="invalid_password">Invalid password</string>
+
+    <!--  New Email  -->
+    <string name="new_email_address">New Email Address</string>
+    <string name="new_email_address_description">Enter new email address</string>
+
+    <!--  Verify email  -->
+    <string name="verify_email">Verify Email</string>
+    <string name="enter_the_code_sent_to">Enter the code sent to</string>
+    <string name="resent_code_to_email">Resent code to email</string>
+    <string name="your_email_has_been_updated">Your email has been updated</string>
+
+    <!--  New Phone  -->
+    <string name="new_mobile_number">New Mobile</string>
+    <string name="new_mobile_number_description">Enter new mobile number</string>
+
+    <!--  Verify phone  -->
+    <string name="verify_number">Verify Number</string>
+    <string name="verify_number_description">To create your account lets first verify that this is your phone number</string>
+    <string name="verify_number_subtitle">To create your account lets first verify that this is your phone number</string>
+    <string name="resent_code_to_mobile_number">Resent code to mobile number</string>
+    <string name="your_mobile_number_has_been_updated">Your mobile number has been updated</string>
+
+    <!--  Check Phone Number Screen -->
+
+    <!--  Create password screen  -->
+    <string name="password_below_minimum_format">Password must be at least %1$d characters</string>
+    <string name="password_exceeds_maximum_format">Password must not exceed %1$d characters</string>
+
+    <!-- Change password screen -->
+    <string name="your_password_has_been_updated">Your password has been updated</string>
+    <string name="verify_password_for_current_password_description">Enter your current password to change your password</string>
+
+    <!--  Dialogs  -->
+    <string name="unsaved_changes_title">Would you like to save?</string>
+    <string name="unsaved_changes_body">Any unsaved changes will be discarded</string>
+    <string name="delete_account_confirmation_title">Are you sure you want to delete your account?</string>
+    <string name="delete_account_confirmation_body">You won\'t be able to undo this step</string>
+    <string name="update_gate_title">Time for an update</string>
+    <string name="update_gate_description">Update your app to new version.</string>
+
+    <!--  Generic strings  -->
+    <string name="back">Back</string>
+    <string name="discard">Discard</string>
+    <string name="resend">Resend</string>
+    <string name="later">Later</string>
+    <string name="update">Update</string>
+    <string name="your_changes_has_been_saved">Your changes has been saved</string>
+    <string name="welcome">Welcome</string>
+    <string name="add_email">Add your email</string>
+    <string name="send_updates">So we can send you updates</string>
+    <string name="filter">filter</string>
+    <string name="options">options</string>
+    <string name="version_format">Version %s</string>
+    <string name="search">Search</string>
+    <string name="location">Location</string>
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
+    <string name="no_internet_connection_error">Please check your internet connection</string>
+
+    <!--  Bottom Navigation  -->
+    <string name="home">Home</string>
+
+</resources>

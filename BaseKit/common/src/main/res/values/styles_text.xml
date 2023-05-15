@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.Text.LargeTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.LargeTitle</item>
+        <item name="lineHeight">@dimen/line_height_large_title</item>
+    </style>
+
+    <style name="Styles.Text.Title1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Title1</item>
+        <item name="lineHeight">@dimen/line_height_title1</item>
+    </style>
+
+    <style name="Styles.Text.Title2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Title2</item>
+        <item name="lineHeight">@dimen/line_height_title2</item>
+    </style>
+
+    <style name="Styles.Text.Title3" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Title3</item>
+        <item name="lineHeight">@dimen/line_height_title3</item>
+    </style>
+
+    <style name="Styles.Text.Headline" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Headline</item>
+        <item name="lineHeight">@dimen/line_height_headline</item>
+    </style>
+
+    <style name="Styles.Text.Body" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="lineHeight">@dimen/line_height_body</item>
+    </style>
+
+    <style name="Styles.Text.Body.Medium" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Body.Medium</item>
+        <item name="lineHeight">@dimen/line_height_body</item>
+    </style>
+
+    <style name="Styles.Text.Callout" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Callout</item>
+        <item name="lineHeight">@dimen/line_height_callout</item>
+    </style>
+
+    <style name="Styles.Text.Subheadline" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Subheadline</item>
+        <item name="lineHeight">@dimen/line_height_subheadline</item>
+    </style>
+
+    <style name="Styles.Text.Subheadline.Medium" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Subheadline.Medium</item>
+        <item name="lineHeight">@dimen/line_height_subheadline</item>
+    </style>
+
+    <style name="Styles.Text.Footnote" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Footnote</item>
+        <item name="lineHeight">@dimen/line_height_footnote</item>
+    </style>
+
+    <style name="Styles.Text.Footnote.Light" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Footnote</item>
+        <item name="lineHeight">@dimen/line_height_footnote</item>
+
+        <item name="android:textColor">?attr/colorGreyInactive</item>
+    </style>
+
+    <style name="Styles.Text.Caption" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Caption</item>
+        <item name="lineHeight">@dimen/line_height_caption</item>
+    </style>
+
+    <style name="Styles.Text.Caption.Semibold" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Caption.Semibold</item>
+        <item name="lineHeight">@dimen/line_height_caption</item>
+    </style>
+
+    <style name="Styles.Text.NavigationLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.NavigationLabel</item>
+        <item name="lineHeight">@dimen/line_height_navigation_label</item>
+    </style>
+</resources>

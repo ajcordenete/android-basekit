@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.TopAppBar.Layout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Styles.TopAppBar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">?attr/colorBackground</item>
+
+        <item name="titleTextColor">?attr/colorOnLightRegular</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Title1</item>
+    </style>
+
+    <style name="Styles.TopAppBar.Main" />
+
+    <style name="Styles.TopAppBar.Main.Large">
+        <item name="titleTextAppearance">@style/TextAppearance.LargeTitle</item>
+    </style>
+
+    <style name="Styles.TopAppBar.Sub">
+        <item name="titleTextAppearance">@style/TextAppearance.Headline</item>
+    </style>
+</resources>

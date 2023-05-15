@@ -34,7 +34,8 @@ android {
 }
 
 dependencies {
-    implementation project(":domain")
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api project(":domain")
     implementation project(":local")
     implementation project(":network")
 

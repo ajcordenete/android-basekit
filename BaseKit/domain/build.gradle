@@ -34,8 +34,13 @@ android {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation Libs.coreKtx
     implementation Libs.kotlinStdLib
+
+    api Libs.coroutinesCore
+    api Libs.coroutinesAndroid
+    api Libs.timber
 
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit
