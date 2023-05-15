@@ -7,6 +7,8 @@ object Versions {
     const val constraintLayoutVersion = "2.1.4"
     const val kotlinStdLibVersion = "1.6.10"
     const val activityKtxVersion = "1.7.1"
+    const val fragmentKtxVersion = "1.5.7"
+    const val splashScreenVersion = "1.0.0-beta02"
 
     const val hiltVersion = "2.44"
 

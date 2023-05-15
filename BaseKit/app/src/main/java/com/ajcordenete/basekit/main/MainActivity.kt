@@ -1,6 +1,7 @@
 package com.ajcordenete.basekit.main
 
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ajcordenete.basekit.R
@@ -13,6 +14,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun getLayoutId() = R.layout.activity_main
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Enable support for Splash Screen API for
+        // proper Android 12+ support
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
 
         /*binding

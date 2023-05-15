@@ -36,6 +36,9 @@ android {
 dependencies {
     implementation Libs.coreKtx
     implementation Libs.kotlinStdLib
+
+    api Libs.coroutinesCore
+    api Libs.coroutinesAndroid
     api Libs.timber
 
     testImplementation Libs.junit

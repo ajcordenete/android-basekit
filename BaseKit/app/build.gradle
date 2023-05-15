@@ -49,6 +49,7 @@ dependencies {
     implementation Libs.appCompat
     implementation Libs.materialLib
     implementation Libs.constraintLayout
+    implementation Libs.splashScreen
 
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit

@@ -45,6 +45,10 @@ dependencies {
     implementation Libs.materialLib
     implementation Libs.constraintLayout
 
+    // Kotlin
+    implementation Libs.navigationFragmentKtx
+    implementation Libs.navigationUiKtx
+
     testImplementation Libs.junit
     androidTestImplementation Libs.androidxTestJunit
     androidTestImplementation Libs.espressoCore

@@ -5,6 +5,8 @@ object Libs {
     const val materialLib = "com.google.android.material:material:${Versions.materialVersion}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
     const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtxVersion}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx::${Versions.fragmentKtxVersion}"
+    const val splashScreen = "androidx.core:core-splashscreen:${Versions.splashScreenVersion}"
 
     //Kotlin
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinStdLibVersion}"
