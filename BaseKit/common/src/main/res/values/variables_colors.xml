@@ -15,14 +15,14 @@
         <item name="colorSheet">@color/colorSheet</item>
 
         <!-- On Colors -->
-        <item name="colorOnLightRegular">#000000</item>
-        <item name="colorOnLightSecondary">#5F646C</item>
-        <item name="colorOnLightTertiary">#5F646C</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorOnSecondary">#FFFFFF</item>
-        <item name="colorOnAlertError">#FFFFFF</item>
-        <item name="colorOnAlertWarning">#000000</item>
-        <item name="colorOnAlertSuccess">#000000</item>
+        <item name="colorOnLightRegular">@color/colorOnLightRegular</item>
+        <item name="colorOnLightSecondary">@color/colorOnLightSecondary</item>
+        <item name="colorOnLightTertiary">@color/colorOnLightTertiary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnAlertError">@color/colorOnAlertError</item>
+        <item name="colorOnAlertWarning">@color/colorOnAlertWarning</item>
+        <item name="colorOnAlertSuccess">@color/colorOnAlertError</item>
         <item name="rippleColor">@color/color_primary_full_12</item>
     </style>
 </resources>

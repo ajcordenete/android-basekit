@@ -20,4 +20,15 @@
     <color name="colorGreyBorderDivider">#C6C6C8</color>
     <color name="colorBackground">@color/white</color>
     <color name="colorSheet">@color/white</color>
+
+    <!-- On Colors -->
+    <color name="colorOnLightRegular">#000000</color>
+    <color name="colorOnLightSecondary">#5F646C</color>
+    <color name="colorOnLightTertiary">#5F646C</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnAlertError">#FFFFFF</color>
+    <color name="colorOnAlertWarning">#000000</color>
+    <color name="colorOnAlertSuccess">#000000</color>
+    <color name="rippleColor">@color/color_primary_full_12</color>
 </resources>
