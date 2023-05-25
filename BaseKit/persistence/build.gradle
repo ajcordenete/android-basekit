@@ -1,13 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'kotlin-parcelize'
+    id 'kotlin-android'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
-    namespace 'com.ajcordenete.data'
+    namespace 'com.ajcordenete.persistence'
     compileSdk Android.compileSdkVersion
 
     defaultConfig {
@@ -35,9 +35,14 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api project(":domain")
-    implementation project(':persistence')
-    implementation project(":network")
+    // Local storage
+    implementation Libs.roomRuntime
+    implementation Libs.roomKtx
+    annotationProcessor Libs.roomCompiler
+    kapt Libs.roomCompiler
+
+    implementation Libs.sqlCipher
+    implementation Libs.sqlite
 
     //Hilt
     implementation Libs.hiltAndroid

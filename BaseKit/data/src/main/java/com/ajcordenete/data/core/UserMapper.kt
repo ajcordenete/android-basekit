@@ -1,7 +1,7 @@
 package com.ajcordenete.data.core
 
 import com.ajcordenete.domain.models.User
-import com.ajcordenete.local.features.user.models.UserDB
+import com.ajcordenete.persistence.features.user.models.UserDB
 import com.ajcordenete.network.feature.user.models.UserDTO
 
 fun User.asEntity(): UserDB {

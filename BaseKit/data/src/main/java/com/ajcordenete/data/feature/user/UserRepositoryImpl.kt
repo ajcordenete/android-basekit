@@ -4,7 +4,7 @@ import com.ajcordenete.data.core.asDomain
 import com.ajcordenete.data.core.asEntity
 import com.ajcordenete.domain.get
 import com.ajcordenete.domain.models.User
-import com.ajcordenete.local.features.user.UserLocalSource
+import com.ajcordenete.persistence.features.user.UserLocalSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
 import java.lang.Exception
 import javax.inject.Inject
