@@ -2,11 +2,9 @@ package com.ajcordenete.basekit.main
 
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.ajcordenete.basekit.R
 import com.ajcordenete.basekit.databinding.ActivityMainBinding
-import com.ajcordenete.common.base.BaseActivity
+import com.ajcordenete.core.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
