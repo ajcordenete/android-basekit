@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'com.ajcordenete.common'
+    namespace 'com.ajcordenete.core'
     compileSdk Android.compileSdkVersion
 
     defaultConfig {

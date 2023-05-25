@@ -1,4 +1,4 @@
-package com.ajcordenete.local.base
+package com.ajcordenete.persistence.base
 
 import androidx.room.Delete
 import androidx.room.Insert

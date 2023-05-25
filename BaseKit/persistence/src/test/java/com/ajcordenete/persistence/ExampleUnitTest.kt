@@ -1,4 +1,4 @@
-package com.ajcordenete.local
+package com.ajcordenete.persistence
 
 import org.junit.Test
 

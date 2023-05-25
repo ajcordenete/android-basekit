@@ -2,7 +2,7 @@ package com.ajcordenete.data
 
 import com.ajcordenete.data.feature.user.UserRepository
 import com.ajcordenete.data.feature.user.UserRepositoryImpl
-import com.ajcordenete.local.features.user.UserLocalSource
+import com.ajcordenete.persistence.features.user.UserLocalSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
 import dagger.Module
 import dagger.Provides

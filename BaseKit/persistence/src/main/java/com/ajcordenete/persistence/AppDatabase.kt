@@ -1,11 +1,11 @@
-package com.ajcordenete.local
+package com.ajcordenete.persistence
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.ajcordenete.local.features.user.dao.UserDao
-import com.ajcordenete.local.features.user.models.UserDB
+import com.ajcordenete.persistence.features.user.dao.UserDao
+import com.ajcordenete.persistence.features.user.models.UserDB
 import net.sqlcipher.database.SQLiteDatabase
 import net.sqlcipher.database.SupportFactory
 

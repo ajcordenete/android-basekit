@@ -1,11 +1,11 @@
-package com.ajcordenete.local.features.user.dao
+package com.ajcordenete.persistence.features.user.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.ajcordenete.local.base.BaseDao
-import com.ajcordenete.local.features.user.models.UserDB
+import com.ajcordenete.persistence.base.BaseDao
+import com.ajcordenete.persistence.features.user.models.UserDB
 
 @Dao
 abstract class UserDao: BaseDao<UserDB>  {

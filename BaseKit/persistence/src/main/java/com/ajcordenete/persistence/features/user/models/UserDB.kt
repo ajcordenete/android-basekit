@@ -1,4 +1,4 @@
-package com.ajcordenete.local.features.user.models
+package com.ajcordenete.persistence.features.user.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

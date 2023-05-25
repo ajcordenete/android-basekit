@@ -1,8 +1,8 @@
-package com.ajcordenete.local
+package com.ajcordenete.persistence
 
 import android.app.Application
-import com.ajcordenete.local.features.user.UserLocalSource
-import com.ajcordenete.local.features.user.UserLocalSourceImpl
+import com.ajcordenete.persistence.features.user.UserLocalSource
+import com.ajcordenete.persistence.features.user.UserLocalSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

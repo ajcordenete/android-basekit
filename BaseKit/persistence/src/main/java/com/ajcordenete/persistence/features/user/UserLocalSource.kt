@@ -1,6 +1,6 @@
-package com.ajcordenete.local.features.user
+package com.ajcordenete.persistence.features.user
 
-import com.ajcordenete.local.features.user.models.UserDB
+import com.ajcordenete.persistence.features.user.models.UserDB
 
 interface UserLocalSource {
 

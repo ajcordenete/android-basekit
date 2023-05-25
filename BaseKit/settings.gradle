@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BaseKit"
 include ':app'
-include ':local'
+include ':persistence'
 include ':domain'
 include ':network'
 include ':data'
