@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="semi_white">#EFEFEF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="butterfly_bush">#5A489B</color>
+    <color name="black_50">#CC000000</color>
+    <color name="black_30">#80000000</color>
+    <color name="cerulean_blue">#2C66D5</color>
+
+    <!-- Define Theming colors here-->
+    <color name="colorPrimaryFull">#1062FF</color>
+    <color name="colorPrimaryShade1">#9DBCF7</color>
+    <color name="colorPrimaryShade2">#F4F7FD</color>
+    <color name="colorSecondaryFull">#5A489B</color>
+    <color name="colorAlertWarning">#FFD20C</color>
+    <color name="colorAlertSuccess">#72D62A</color>
+    <color name="colorAlertError">#FA4856</color>
+    <color name="colorGreyInactive">#AEB2B9</color>
+    <color name="colorGreyBorderDivider">#C6C6C8</color>
+    <color name="colorBackground">@color/white</color>
+    <color name="colorSheet">@color/white</color>
+
+    <!-- On Colors -->
+    <color name="colorOnLightRegular">#000000</color>
+    <color name="colorOnLightSecondary">#5F646C</color>
+    <color name="colorOnLightTertiary">#5F646C</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnAlertError">#FFFFFF</color>
+    <color name="colorOnAlertWarning">#000000</color>
+    <color name="colorOnAlertSuccess">#000000</color>
+    <color name="rippleColor">@color/color_primary_full_12</color>
+</resources>

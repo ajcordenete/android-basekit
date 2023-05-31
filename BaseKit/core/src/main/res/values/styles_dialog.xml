@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.Dialog.Alert" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">?attr/colorSheet</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Styles.Dialog.Alert.Title.Text</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Styles.Dialog.Alert.Body.Text</item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Styles.Dialog.Alert.NegativeButton
+        </item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Styles.Dialog.Alert.PositiveButton
+        </item>
+    </style>
+
+    <style name="Styles.Dialog.Alert.NegativeButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorPrimaryFull</item>
+        <item name="android:textAppearance">@style/TextAppearance.Headline</item>
+    </style>
+
+    <style name="Styles.Dialog.Alert.PositiveButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorPrimaryFull</item>
+        <item name="android:textAppearance">@style/TextAppearance.Headline</item>
+    </style>
+
+    <style name="Styles.Dialog.Alert.Title.Text" parent="@style/MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">?attr/colorOnLightRegular</item>
+        <item name="android:textAppearance">@style/TextAppearance.Title3</item>
+    </style>
+
+    <style name="Styles.Dialog.Alert.Body.Text" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="android:textColor">?attr/colorOnLightRegular</item>
+    </style>
+</resources>

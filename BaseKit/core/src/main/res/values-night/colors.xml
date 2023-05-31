@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorOnLightRegular">#FFFFFF</color>
+    <color name="colorOnLightSecondary">#5F646C</color>
+    <color name="colorOnLightTertiary">#5F646C</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnAlertError">#FFFFFF</color>
+    <color name="colorOnAlertWarning">#FFFFFF</color>
+    <color name="colorOnAlertSuccess">#FFFFFF</color>
+
+    <color name="colorBackground">#121212</color>
+    <color name="colorSheet">#1E1E1E</color>
+
+</resources>

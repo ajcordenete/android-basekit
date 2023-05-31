@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="elevation">8dp</item>
+        <item name="itemIconTint">@color/bottom_navigation_item_icon_tint</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+    </style>
+</resources>

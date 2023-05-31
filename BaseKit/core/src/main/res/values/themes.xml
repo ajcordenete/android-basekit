@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.BaseKit" parent="Variables.Colors">
+        <!-- region System UI -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryFull</item>
+        <item name="android:windowBackground">@drawable/window_background</item>
+        <!-- endregion -->
+
+        <!-- region Shapes -->
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearance.BaseKit.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">
+            @style/ShapeAppearance.BaseKit.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearance.BaseKit.LargeComponent
+        </item>
+        <!-- endregion -->
+
+        <!-- region Default View Styles -->
+        <item name="materialCardViewStyle">@style/Styles.Card</item>
+        <item name="bottomNavigationStyle">@style/Styles.BottomNavigation</item>
+        <item name="materialButtonStyle">@style/Styles.Button.Primary</item>
+        <item name="android:textViewStyle">@style/Styles.Text.Body</item>
+        <item name="switchStyle">@style/Styles.Toggle</item>
+        <item name="checkboxStyle">@style/Styles.Checkbox</item>
+        <item name="radioButtonStyle">@style/Styles.Radio</item>
+        <item name="sliderStyle">@style/Widget.BaseKit.Slider</item>
+        <item name="toolbarStyle">@style/Styles.TopAppBar.Main</item>
+        <item name="appBarLayoutStyle">@style/Styles.TopAppBar.Layout</item>
+        <item name="textInputStyle">@style/Styles.Input.TextInputLayout.Filled</item>
+        <item name="materialAlertDialogTheme">@style/Styles.Dialog.Alert</item>
+        <item name="android:textColor">?attr/colorOnLightRegular</item>
+        <!-- endregion -->
+    </style>
+</resources>

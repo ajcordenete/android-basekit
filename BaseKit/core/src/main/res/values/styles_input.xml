@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.Input.TextInputLayout.Filled" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.Baseplate.TextInputLayout.Cursor
+        </item>
+
+        <item name="boxBackgroundColor">@color/input_filled_box_background_color</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Footnote</item>
+        <item name="boxCollapsedPaddingTop">4dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
+        <item name="hintTextColor">?attr/colorPrimaryFull</item>
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
+    </style>
+
+    <style name="Styles.Input.TextInputLayout.Line" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.Baseplate.TextInputLayout.Cursor
+        </item>
+
+        <item name="boxBackgroundColor">?attr/colorBackground</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Footnote</item>
+        <item name="boxCollapsedPaddingTop">4dp</item>
+        <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
+        <item name="hintTextColor">?attr/colorPrimaryFull</item>
+        <item name="boxStrokeColor">@color/input_line_box_stroke_color</item>
+        <item name="strokeColor">?attr/colorPrimaryFull</item>
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
+    </style>
+
+    <style name="Styles.Input.TextInputLayout.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.Baseplate.TextInputLayout.Cursor
+        </item>
+
+        <item name="hintTextAppearance">@style/TextAppearance.Footnote</item>
+        <item name="boxCollapsedPaddingTop">4dp</item>
+        <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
+        <item name="hintTextColor">?attr/colorPrimaryFull</item>
+        <item name="boxStrokeColor">@color/input_outlined_box_stroke_color</item>
+        <item name="strokeColor">?attr/colorPrimaryFull</item>
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
+    </style>
+
+
+    <style name="Styles.Input.TextInputEditText" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="Styles.Input.TextInputEditText.Filled" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="Styles.Input.TextInputEditText.Outlined" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">?attr/colorOnLightRegular</item>
+    </style>
+
+    <style name="Styles.Input.TextInputEditText.Line">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textColor">?attr/colorOnLightRegular</item>
+    </style>
+
+    <style name="Styles.Input.TextInputEditText.Prefix" />
+
+    <style name="Styles.Input.TextInputLayout.Filled.Search" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.Baseplate.TextInputLayout.Cursor
+        </item>
+
+        <item name="boxBackgroundColor">@color/input_filled_box_background_color</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Footnote</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="android:textColorHint">?attr/colorOnLightTertiary</item>
+        <item name="hintTextColor">?attr/colorPrimaryFull</item>
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BaseKit.Input</item>
+    </style>
+
+    <!--  region Input ThemeOverlays  -->
+    <style name="ThemeOverlay.Baseplate.TextInputLayout.Cursor" parent="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="colorControlActivated">?attr/colorPrimaryFull</item>
+    </style>
+    <!--  endregion  -->
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Navigation Component Uris  -->
+    <string name="register_verification_nav_uri">android-app://com.appetiser.baseplate.RegisterVerificationFragment?email={email}&amp;phone={phone}</string>
+    <string name="upload_profile_photo_nav_uri">android-app://com.appetiser.baseplate.UploadProfilePhotoFragment?hideBackButton={hideBackButton}&amp;isExitOnBack={isExitOnBack}</string>
+    <string name="register_add_email_nav_uri">android-app://com.appetiser.baseplate.AddEmailFragment?hideBackButton={hideBackButton}</string>
+    <string name="input_name_nav_uri">android-app://com.appetiser.baseplate.InputNameFragment?hideBackButton={hideBackButton}&amp;isExitOnBack={isExitOnBack}</string>
+</resources>

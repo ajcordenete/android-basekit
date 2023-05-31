@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Variables.Colors" parent="Variables.Typography">
+        <item name="colorPrimaryFull">@color/colorPrimaryFull</item>
+        <item name="colorPrimaryShade1">@color/colorPrimaryShade1</item>
+        <item name="colorPrimaryShade2">@color/colorPrimaryShade2</item>
+        <item name="colorSecondaryFull">@color/colorSecondaryFull</item>
+        <item name="colorAlertWarning">@color/colorAlertWarning</item>
+        <item name="colorAlertSuccess">@color/colorAlertSuccess</item>
+        <item name="colorAlertError">@color/colorAlertError</item>
+        <item name="colorGreyInactive">@color/colorGreyInactive</item>
+        <item name="colorGreyBorderDivider">@color/colorGreyBorderDivider</item>
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorSheet">@color/colorSheet</item>
+
+        <!-- On Colors -->
+        <item name="colorOnLightRegular">@color/colorOnLightRegular</item>
+        <item name="colorOnLightSecondary">@color/colorOnLightSecondary</item>
+        <item name="colorOnLightTertiary">@color/colorOnLightTertiary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnAlertError">@color/colorOnAlertError</item>
+        <item name="colorOnAlertWarning">@color/colorOnAlertWarning</item>
+        <item name="colorOnAlertSuccess">@color/colorOnAlertError</item>
+        <item name="rippleColor">@color/color_primary_full_12</item>
+    </style>
+</resources>

@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+#https://devhints.io/bash
+
+set -ex
+new="$1"
+shift
+
+# Check if basekit is called
+if [ $# -gt 0 ]; then
+  old="$1"
+else
+  raise error "You need to add \`basekit\` to your command"
+fi
+
+# Filter project name, No special characters, numbers and capital letters
+old="$(echo "$old" | sed -E 's/[^A-Za-z]//g')"
+new="$(echo "$new" | sed -E 's/[^A-Za-z]//g')"
+
+# New project name converted to lower
+new_lower="$(echo "$new" | tr 'A-Z' 'a-z')"
+
+# Uppercase first letter of your new project name
+upperCaseFirstLetter="$(tr '[:lower:]' '[:upper:]' <<<"${new:0:1}")${new:1}"
+
+# New package name based on `$new_lower`
+newPackageName="$(echo app/src/main/java/com/ajcordenete/${new_lower})"
+#
+# Package for data
+dataPackageName="$(echo data/src/main/java/com/ajcordenete/module/data)"
+#
+## Package for local
+localPackageName="$(echo local/src/main/java/com/ajcordenete/module/local)"
+#
+# Package for network
+networkPackageName="$(echo network/src/main/java/com/ajcordenete/module/network)"
+#
+# Package for test
+testPackageName="$(echo app/src/test/java/com/ajcordenete/${new_lower})"
+androidTestPackageName="$(echo app/src/androidTest/java/com/ajcordenete/${new_lower})"
+
+newAndroid="$(echo "$new" | tr 'A-Z' 'a-z')"
+
+# Copy basekit project to new android project named `{$new}-android`
+cp -r "$old" "$newAndroid"
+
+# Go to new android project
+cd "$newAndroid"
+
+# replace references to package in Kotlin, Java, XML and CFG (proguard) files
+mv app/src/main/java/com/ajcordenete/basekit $newPackageName
+
+# rename application class
+mv ${newPackageName}/BaseApplication.kt ${newPackageName}/${upperCaseFirstLetter}Application.kt
+
+# rename testing packages
+mv app/src/androidTest/java/com/ajcordenete/basekit ${androidTestPackageName}
+mv app/src/test/java/com/ajcordenete/basekit ${testPackageName}
+
+# Replace all text that contains `ajcordenete.basekit` to `ajcordenete.${new_lower}`  `.xml`, `.kt`, `.java`, `.cfg`, `.build.gradle`
+find app -type f \( -name "*xml" -o -name "*.kt" -o -name "*.java" -o -name "*.cfg" -o -name "build.gradle" \) -print0 | xargs -0 sed -i "s/ajcordenete.basekit/ajcordenete.${new_lower}/g;s/.ajcordenete.${new_lower}:/.ajcordenete.basekit:/g"
+
+#
+find app -type f \( -name "build.gradle" \) -print0 | xargs -0 sed -i "s/apply plugin\: \'com.google.gms.google-services\'/\/\/apply plugin\: \'com.google.gms.google-services\'/g"
+
+# Replace app name to new project app name
+find . -type f \( -name "strings.xml" \) -print0 | xargs -0 sed -i "s#<string name=\"app_name\">BaseKit</string>#<string name=\"app_name\">${upperCaseFirstLetter}</string>#g"
+
+# Change application class name and content name
+find . -type f \( -name "*.kt" -o -name "*.java" -o -name "AndroidManifest.xml" \) -print0 | xargs -0 sed -i "s/BaseApplication/${upperCaseFirstLetter}Application/g"
+
+# Change database module's database name
+find local/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
+
+find local/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
+
+# Replace app name to in settings.gradle
+find . -type f \( -name "settings.gradle" \) -print0 | xargs -0 sed -i "s/rootProject.name = \"BaseKit\"/rootProject.name = \"${upperCaseFirstLetter}\"/g"
