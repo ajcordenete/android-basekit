@@ -17,11 +17,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         installSplashScreen()
 
         super.onCreate(savedInstanceState)
-
-        /*binding
-            .bottomNavigation
-            .setupWithNavController(
-                findNavController(R.id.nav_host_fragment)
-            )*/
     }
 }

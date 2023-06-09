@@ -19,3 +19,11 @@ fun AppCompatActivity.launch(action: suspend CoroutineScope.() -> Unit) {
         action(this)
     }
 }
+
+fun Activity.convertPxToDp(px: Float): Float {
+    return px / this.resources.displayMetrics.density
+}
+
+fun Activity.convertDpToPx(dp: Float): Float {
+    return dp * this.resources.displayMetrics.density
+}
