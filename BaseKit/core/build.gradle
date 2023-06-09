@@ -55,10 +55,6 @@ dependencies {
     implementation Libs.navigationFragmentKtx
     implementation Libs.navigationUiKtx
 
-    testImplementation Libs.junit
-    androidTestImplementation Libs.androidxTestJunit
-    androidTestImplementation Libs.espressoCore
-
     //Hilt
     implementation Libs.hiltAndroid
     kapt Libs.hiltCompiler
