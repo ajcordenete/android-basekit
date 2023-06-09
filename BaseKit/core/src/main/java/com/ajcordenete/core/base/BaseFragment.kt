@@ -70,6 +70,7 @@ abstract class BaseFragment<B: ViewDataBinding> : Fragment() {
 
     fun enableToolbarHomeIndicator(toolbar: Toolbar, title: String? = "") {
         (requireActivity() as AppCompatActivity).apply {
+            setHasOptionsMenu(true)
             setSupportActionBar(toolbar)
             supportActionBar?.setDisplayHomeAsUpEnabled(canBack())
             supportActionBar?.setHomeButtonEnabled(canBack())
