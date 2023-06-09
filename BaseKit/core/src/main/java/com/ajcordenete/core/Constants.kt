@@ -1,4 +1,3 @@
 package com.ajcordenete.core
 
-class Constants {
-}
+const val SNACKBAR_DURATION = 3000
