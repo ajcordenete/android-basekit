@@ -24,16 +24,7 @@ upperCaseFirstLetter="$(tr '[:lower:]' '[:upper:]' <<<"${new:0:1}")${new:1}"
 
 # New package name based on `$new_lower`
 newPackageName="$(echo app/src/main/java/com/ajcordenete/${new_lower})"
-#
-# Package for data
-dataPackageName="$(echo data/src/main/java/com/ajcordenete/module/data)"
-#
-## Package for local
-localPackageName="$(echo local/src/main/java/com/ajcordenete/module/local)"
-#
-# Package for network
-networkPackageName="$(echo network/src/main/java/com/ajcordenete/module/network)"
-#
+
 # Package for test
 testPackageName="$(echo app/src/test/java/com/ajcordenete/${new_lower})"
 androidTestPackageName="$(echo app/src/androidTest/java/com/ajcordenete/${new_lower})"
@@ -69,9 +60,9 @@ find . -type f \( -name "strings.xml" \) -print0 | xargs -0 sed -i "s#<string na
 find . -type f \( -name "*.kt" -o -name "*.java" -o -name "AndroidManifest.xml" \) -print0 | xargs -0 sed -i "s/BaseApplication/${upperCaseFirstLetter}Application/g"
 
 # Change database module's database name
-find local/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
+find persistence/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
 
-find local/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
+find persistence/src/main -type f \( -name "*.kt" -o -name "*.java" \) -print0 | xargs -0 sed -i "s/baseplate.db/${new_lower}.db/g"
 
 # Replace app name to in settings.gradle
 find . -type f \( -name "settings.gradle" \) -print0 | xargs -0 sed -i "s/rootProject.name = \"BaseKit\"/rootProject.name = \"${upperCaseFirstLetter}\"/g"
