@@ -31,7 +31,15 @@ object Versions {
     const val roomVersion = "2.5.1"
 
     //Tests
+    //Tests
     const val junitVersion = "4.13.2"
     const val jUnitExtVersion = "1.1.5"
     const val espressoVersion = "3.5.1"
+    const val androidXJunitVersion = "1.1.2"
+    const val mockitoVersion = "3.11.2"
+    const val testRunnerVersion = "1.3.0"
+    const val testRulesVersion = "1.3.0"
+    const val archCompTestVersion = "2.1.0"
+    const val coroutinesTestVersion = "1.6.0"
+    const val turbineVersion = "0.5.2"
 }

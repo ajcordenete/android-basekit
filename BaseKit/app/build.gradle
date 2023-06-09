@@ -48,10 +48,6 @@ dependencies {
 
     implementation Libs.splashScreen
 
-    testImplementation Libs.junit
-    androidTestImplementation Libs.androidxTestJunit
-    androidTestImplementation Libs.espressoCore
-
     //Hilt
     implementation Libs.hiltAndroid
     kapt Libs.hiltCompiler
@@ -72,6 +68,18 @@ dependencies {
     // Coroutines
     implementation Libs.coroutinesCore
     implementation Libs.coroutinesAndroid
+
+    // Testing
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockito
+    testImplementation TestLibs.archCoreTesting
+    testImplementation TestLibs.coroutinesTest
+    testImplementation TestLibs.turbine
+
+    androidTestImplementation TestLibs.androidXJUnit
+    androidTestImplementation TestLibs.espresso
+    androidTestImplementation TestLibs.testRules
+    androidTestImplementation TestLibs.testRunner
 }
 
 // Allow references to generated code

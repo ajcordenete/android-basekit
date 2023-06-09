@@ -42,7 +42,9 @@ dependencies {
     api Libs.coroutinesAndroid
     api Libs.timber
 
-    testImplementation Libs.junit
-    androidTestImplementation Libs.androidxTestJunit
-    androidTestImplementation Libs.espressoCore
+    implementation TestLibs.mockito
+    implementation TestLibs.coroutinesTest
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.coroutinesTest
+    testImplementation TestLibs.turbine
 }

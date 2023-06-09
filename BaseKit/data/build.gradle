@@ -43,7 +43,8 @@ dependencies {
     implementation Libs.hiltAndroid
     kapt Libs.hiltCompiler
 
-    testImplementation Libs.junit
-    androidTestImplementation Libs.androidxTestJunit
-    androidTestImplementation Libs.espressoCore
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockito
+    testImplementation TestLibs.archCoreTesting
+    testImplementation TestLibs.coroutinesTest
 }

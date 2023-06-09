@@ -53,8 +53,4 @@ object Libs {
 
     // Jetpack Compose Integration
     const val navigationComposeTesting = "androidx.navigation:navigation-compose:${Versions.navigationVersion}"
-
-    const val junit = "junit:junit:${Versions.junitVersion}"
-    const val androidxTestJunit = "androidx.test.ext:junit:${Versions.jUnitExtVersion}}"
-    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoVersion}"
 }
