@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="grid_0">0dp</dimen>
+    <dimen name="grid_1">1dp</dimen>
+    <dimen name="grid_2">2dp</dimen>
+    <dimen name="grid_4">4dp</dimen>
+    <dimen name="grid_5">5dp</dimen>
+    <dimen name="grid_8">8dp</dimen>
+    <dimen name="grid_10">10dp</dimen>
+    <dimen name="grid_12">12dp</dimen>
+    <dimen name="grid_16">16dp</dimen>
+    <dimen name="grid_20">20dp</dimen>
+    <dimen name="grid_24">24dp</dimen>
+    <dimen name="grid_28">28dp</dimen>
+    <dimen name="grid_32">32dp</dimen>
+    <dimen name="grid_36">36dp</dimen>
+    <dimen name="grid_40">40dp</dimen>
+    <dimen name="grid_48">48dp</dimen>
+    <dimen name="grid_56">56dp</dimen>
+    <dimen name="grid_64">64dp</dimen>
+    <dimen name="grid_72">72dp</dimen>
+    <dimen name="grid_100">100dp</dimen>
+    <dimen name="grid_120">120dp</dimen>
+    <dimen name="grid_250">250dp</dimen>
+    <dimen name="grid_300">300dp</dimen>
+    <dimen name="grid_500">500dp</dimen>
+</resources>

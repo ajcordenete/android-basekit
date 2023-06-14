@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="?attr/screenMargin">
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchUnchecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/switchChecked"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/switchUnchecked"
+        app:layout_constraintStart_toEndOf="@id/switchUnchecked"
+        app:layout_constraintTop_toTopOf="@id/switchUnchecked"
+        tools:text="Unchecked" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchUncheckedDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchUnchecked" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/switchUncheckedDisabled"
+        app:layout_constraintStart_toEndOf="@id/switchUncheckedDisabled"
+        app:layout_constraintTop_toTopOf="@id/switchUncheckedDisabled"
+        tools:text="Unchecked disabled" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchChecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchUncheckedDisabled" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/switchChecked"
+        app:layout_constraintStart_toEndOf="@id/switchChecked"
+        app:layout_constraintTop_toTopOf="@id/switchChecked"
+        tools:text="Checked" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchCheckedDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:enabled="false"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchChecked" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/switchCheckedDisabled"
+        app:layout_constraintStart_toEndOf="@id/switchCheckedDisabled"
+        app:layout_constraintTop_toTopOf="@id/switchCheckedDisabled"
+        tools:text="Checked disabled" />
+</androidx.constraintlayout.widget.ConstraintLayout>

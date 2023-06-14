@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="?attr/screenMargin"
+        android:paddingVertical="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorPrimaryFull"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorPrimaryFull"
+            android:gravity="center"
+            android:text="Full"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorPrimaryShade1"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorPrimaryShade1"
+            android:gravity="center"
+            android:text="Shade 1"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintStart_toEndOf="@id/txtColorPrimaryFull"
+            app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorPrimaryShade2"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorPrimaryShade2"
+            android:gravity="center"
+            android:text="Shade 2"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toEndOf="@id/txtColorPrimaryShade1"
+            app:layout_constraintTop_toBottomOf="@id/txtPrimary" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPrimary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtPrimary, txtColorPrimaryFull, txtColorPrimaryShade1, txtColorPrimaryShade2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorSecondaryFull"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorSecondaryFull"
+            android:gravity="center"
+            android:text="Full"
+            android:textColor="?attr/colorOnSecondary"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSecondary" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierSecondary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtSecondary, txtColorSecondaryFull" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierSecondary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorAlertWarning"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorAlertWarning"
+            android:gravity="center"
+            android:text="Warning"
+            android:textColor="?attr/colorOnAlertWarning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAlert" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorAlertSuccess"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorAlertSuccess"
+            android:gravity="center"
+            android:text="Success"
+            android:textColor="?attr/colorOnAlertSuccess"
+            app:layout_constraintStart_toEndOf="@id/txtColorAlertWarning"
+            app:layout_constraintTop_toBottomOf="@id/txtAlert" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorAlertError"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorAlertError"
+            android:gravity="center"
+            android:text="Error"
+            android:textColor="?attr/colorOnAlertError"
+            app:layout_constraintStart_toEndOf="@id/txtColorAlertSuccess"
+            app:layout_constraintTop_toBottomOf="@id/txtAlert" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierAlert"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtAlert, txtColorAlertWarning, txtColorAlertSuccess, txtColorAlertError" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtGreys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Greys"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierAlert" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorGreyInactive"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorGreyInactive"
+            android:gravity="center"
+            android:text="Inactive"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGreys" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorGreyBorderDivider"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorGreyBorderDivider"
+            android:gravity="center"
+            android:text="Border / Divider"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toEndOf="@id/txtColorGreyInactive"
+            app:layout_constraintTop_toBottomOf="@id/txtGreys" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDisabled"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtGreys, txtColorGreyInactive, txtColorGreyBorderDivider" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierDisabled" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorBackgroundLight"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorBackground"
+            android:gravity="center"
+            android:text="Light"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtBackground" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtBackground, txtColorBackgroundLight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sheet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierBackground" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorSheetLight"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorSheet"
+            android:gravity="center"
+            android:text="Light"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSheet" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierSheet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtSheet, txtColorSheetLight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorOnLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text / On Light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierSheet" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorOnLightRegular"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorBackground"
+            android:gravity="center"
+            android:text="Regular Text"
+            android:textColor="?attr/colorOnLightRegular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtColorOnLight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorOnLightSecondary"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorBackground"
+            android:gravity="center"
+            android:text="Secondary Text"
+            android:textColor="?attr/colorOnLightSecondary"
+            app:layout_constraintStart_toEndOf="@id/txtColorSheetLight"
+            app:layout_constraintTop_toBottomOf="@id/txtColorOnLight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtColorOnLightTertiary"
+            style="@style/Styles.Text.Caption"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorBackground"
+            android:gravity="center"
+            android:text="Tertiary"
+            android:textColor="?attr/colorOnLightTertiary"
+            app:layout_constraintStart_toEndOf="@id/txtColorOnLightSecondary"
+            app:layout_constraintTop_toBottomOf="@id/txtColorOnLight" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierColorOnLight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:barrierMargin="16dp"
+            app:constraint_referenced_ids="txtColorOnLight, txtColorOnLightRegular, txtColorOnLightSecondary, txtColorOnLightTertiary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

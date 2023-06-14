@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/grid_16"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.30"
+        android:src="@drawable/empty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/labelNoEvents"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/labelNoEvents"
+        style="@style/Styles.Text.Title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_items_yet"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/guidelineCenter"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/labelEmptyDescription"
+        style="@style/Styles.Text.Footnote.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_your_first_item"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/labelNoEvents"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

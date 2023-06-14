@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="?attr/screenMargin">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtLargeTitle"
+        style="@style/Styles.Text.LargeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Large Title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitle1"
+        style="@style/Styles.Text.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLargeTitle"
+        tools:text="Title1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitle2"
+        style="@style/Styles.Text.Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle1"
+        tools:text="Title2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtTitle3"
+        style="@style/Styles.Text.Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle2"
+        tools:text="Title3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtHeadline"
+        style="@style/Styles.Text.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle3"
+        tools:text="Headline" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtBody"
+        style="@style/Styles.Text.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeadline"
+        tools:text="Body" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtCallout"
+        style="@style/Styles.Text.Callout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/txtBody"
+        app:layout_constraintTop_toBottomOf="@id/txtBody"
+        tools:text="Callout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtSubheadline"
+        style="@style/Styles.Text.Subheadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/txtBody"
+        app:layout_constraintTop_toBottomOf="@id/txtCallout"
+        tools:text="Subheadline" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtFootnote"
+        style="@style/Styles.Text.Footnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/txtBody"
+        app:layout_constraintTop_toBottomOf="@id/txtSubheadline"
+        tools:text="Footnote" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtCaption"
+        style="@style/Styles.Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/txtBody"
+        app:layout_constraintTop_toBottomOf="@id/txtFootnote"
+        tools:text="Caption" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
