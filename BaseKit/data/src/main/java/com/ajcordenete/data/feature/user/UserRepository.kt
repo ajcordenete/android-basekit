@@ -6,5 +6,5 @@ interface UserRepository {
 
     suspend fun getUsers(): Result<List<User>>
 
-    suspend fun updateUsersFromRemote(): List<User>
+    suspend fun updateUsersFromRemote(): Result<List<User>>
 }

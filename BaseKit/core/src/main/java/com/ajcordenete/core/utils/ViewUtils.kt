@@ -108,6 +108,23 @@ object ViewUtils {
             }
     }
 
+    fun showGenericErrorSnackBar(
+        parentView: View,
+        text: String
+    ) {
+        showErrorSnackBar(
+            parentView,
+            text,
+            parentView
+                .context
+                .getString(
+                    R.string.hide
+                )
+        ) {
+            it.dismiss()
+        }
+    }
+
     @SuppressLint("WrongConstant")
     fun showErrorSnackBar(
         parentView: View,

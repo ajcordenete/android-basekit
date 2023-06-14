@@ -2,11 +2,13 @@ package com.ajcordenete.data.feature.user
 
 import com.ajcordenete.data.core.asDomain
 import com.ajcordenete.data.core.asEntity
+import com.ajcordenete.domain.error
 import com.ajcordenete.domain.get
 import com.ajcordenete.domain.models.User
 import com.ajcordenete.persistence.features.user.UserLocalSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
-import java.lang.Exception
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(
@@ -26,23 +28,23 @@ class UserRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun updateUsersFromRemote(): List<User> {
+    override suspend fun updateUsersFromRemote(): Result<List<User>> {
         val resultUsers = userRemoteSource.getUsers()
+
         return if(resultUsers.isSuccess) {
             val users = resultUsers.get().map { userDTO ->
                 userDTO.asDomain()
             }
-
             //update local cache
             insertUsers(users)
 
-            users
+            Result.success(users)
         } else {
-            listOf()
+            Result.failure(resultUsers.error())
         }
     }
 
-    private suspend fun insertUsers(users: List<User>) {
+    private suspend fun insertUsers(users: List<User>) = withContext(Dispatchers.IO) {
         userLocalSource.insertUsers(
             users.map { user ->
                 user.asEntity()
