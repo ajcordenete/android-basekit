@@ -157,5 +157,6 @@
 
     <!--  Bottom Navigation  -->
     <string name="home">Home</string>
+    <string name="user">User</string>
 
 </resources>

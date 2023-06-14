@@ -8,4 +8,9 @@
         android:id="@+id/fragmentHome"
         android:name="com.ajcordenete.basekit.home.FragmentHome"
         android:label="Home"/>
+
+    <fragment
+        android:id="@+id/fragmentUser"
+        android:name="com.ajcordenete.basekit.user.UserFragment"
+        android:label="User"/>
 </navigation>
