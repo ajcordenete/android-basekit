@@ -1,5 +1,6 @@
 package com.ajcordenete.network.feature.user
 
+import com.ajcordenete.network.core.ErrorHandler
 import com.ajcordenete.network.feature.ApiService
 import com.ajcordenete.network.feature.user.models.UserDTO
 import javax.inject.Inject
@@ -12,15 +13,12 @@ class UserRemoteSourceImpl @Inject constructor(
         return try {
             val response = apiService.getUsers()
 
-            return if (response.isSuccessful) {
-                val users = response.body() ?: emptyList()
-                Result.success(users)
-            } else {
-                Result.failure(Exception(response.message()))
-            }
+            val users = response.body() ?: emptyList()
+            Result.success(users)
+
         } catch (e: Exception) {
             Result.failure(
-                Exception("Generic Error")
+                ErrorHandler.handleError(e)
             )
         }
     }

@@ -8,6 +8,10 @@ import com.ajcordenete.basekit.databinding.FragmentHomeBinding
 import com.ajcordenete.core.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.ajcordenete.core.utils.ViewUtils
+import kotlinx.coroutines.launch
+import timber.log.Timber
 
 @AndroidEntryPoint
 class FragmentHome: BaseFragment<FragmentHomeBinding>() {
@@ -19,6 +23,9 @@ class FragmentHome: BaseFragment<FragmentHomeBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpToolbar()
+        setUpVmObserver()
+
+        viewModel.getUsers()
     }
 
     private fun setUpToolbar() {
@@ -26,5 +33,24 @@ class FragmentHome: BaseFragment<FragmentHomeBinding>() {
             binding.toolbar.toolbarView,
             getString(commonR.string.home)
         )
+    }
+
+    private fun setUpVmObserver() {
+        lifecycleScope.launch {
+            viewModel
+                .uiState
+                .collect(::handleState)
+        }
+    }
+
+    private fun handleState(state: HomeUiState) {
+        when(state) {
+            is HomeUiState.ShowUsers -> {
+                Timber.i("users: ${state.users}")
+            }
+            is HomeUiState.ShowError -> {
+                ViewUtils.showGenericErrorSnackBar(binding.root, state.message)
+            }
+        }
     }
 }
