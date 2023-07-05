@@ -5,9 +5,12 @@ import com.ajcordenete.data.core.asEntity
 import com.ajcordenete.domain.error
 import com.ajcordenete.domain.get
 import com.ajcordenete.domain.models.User
-import com.ajcordenete.persistence.features.user.UserLocalSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
+import com.ajcordenete.persistence.features.user.UserLocalSource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -52,4 +55,14 @@ class UserRepositoryImpl @Inject constructor(
         )
     }
 
+    override suspend fun getUsersFlow(): Flow<List<User>> {
+        return userRemoteSource
+            .getUsersFlow()
+            .map { usersDTO ->
+                usersDTO.map {
+                    it.asDomain()
+                }
+            }
+            .flowOn(Dispatchers.IO)
+    }
 }

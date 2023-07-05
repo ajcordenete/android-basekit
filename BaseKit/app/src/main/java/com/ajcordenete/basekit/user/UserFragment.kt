@@ -3,7 +3,9 @@ package com.ajcordenete.basekit.user
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.ajcordenete.basekit.R
 import com.ajcordenete.basekit.databinding.FragmentUserBinding
 import com.ajcordenete.core.base.BaseFragment
@@ -24,7 +26,7 @@ class UserFragment: BaseFragment<FragmentUserBinding>() {
         setUpToolbar()
         setUpVmObserver()
 
-        viewModel.getUsers()
+        viewModel.getUsersFlow()
     }
 
     private fun setUpToolbar() {
@@ -36,9 +38,12 @@ class UserFragment: BaseFragment<FragmentUserBinding>() {
 
     private fun setUpVmObserver() {
         lifecycleScope.launch {
-            viewModel
-                .uiState
-                .collect(::handleState)
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel
+                    .uiState
+                    .collect(::handleState)
+            }
+
         }
     }
 
