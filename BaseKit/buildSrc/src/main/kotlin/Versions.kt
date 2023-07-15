@@ -41,5 +41,5 @@ object Versions {
     const val testRulesVersion = "1.3.0"
     const val archCompTestVersion = "2.1.0"
     const val coroutinesTestVersion = "1.6.0"
-    const val turbineVersion = "0.5.2"
+    const val turbineVersion = "1.0.0"
 }

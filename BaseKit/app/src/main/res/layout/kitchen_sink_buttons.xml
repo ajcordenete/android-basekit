@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Primary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPrimaryDisabled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPrimary"
+        tools:text="Primary Disabled" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSecondary"
+        style="@style/Styles.Button.Secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPrimaryDisabled"
+        tools:text="Secondary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSecondaryDisabled"
+        style="@style/Styles.Button.Secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSecondary"
+        tools:text="Secondary Disabled" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOutlined"
+        style="@style/Styles.Button.Outlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSecondaryDisabled"
+        tools:text="Outlined" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOutlinedDisabled"
+        style="@style/Styles.Button.Outlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?attr/screenMargin"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOutlined"
+        tools:text="Outlined Disabled" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBottomFull"
+        style="@style/Styles.Button.Primary.BottomFull"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOutlinedDisabled"
+        tools:text="Bottom Full" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBottomFullDisabled"
+        style="@style/Styles.Button.Primary.BottomFull"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBottomFull"
+        tools:text="Bottom Full Disabled" />
+</androidx.constraintlayout.widget.ConstraintLayout>
