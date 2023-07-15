@@ -18,4 +18,9 @@ interface ApiService {
     suspend fun login(
         @Body requestBody: RequestBody
     ): BaseDataResponse<UserAuthData>
+
+    @POST("auth/register")
+    suspend fun register(
+        @Body requestBody: RequestBody
+    ): BaseDataResponse<UserAuthData>
 }

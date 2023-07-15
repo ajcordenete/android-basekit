@@ -9,4 +9,12 @@ interface AuthRemoteSource {
         email: String,
         password: String
     ): Result<Pair<UserDTO, AccessTokenDTO>>
+
+    suspend fun register(
+        firstName: String,
+        lastName: String,
+        fullName: String,
+        email: String,
+        password: String
+    ): Result<Pair<UserDTO, AccessTokenDTO>>
 }

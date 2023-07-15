@@ -35,4 +35,23 @@ class HomeViewModel @Inject constructor(
         }
     )
 
+    fun register() = launch(
+        action = {
+            val result = authRepository.register(
+                firstName = "hey",
+                lastName = "yo",
+                fullName = "this",
+                email = "toy@gmail.com",
+                password = "password"
+            )
+            if(result.isSuccess) {
+                Timber.i("auth: ${result.get()}")
+            } else if(result.isFailure) {
+                Timber.i("auth failed: ${result.error()}")
+            }
+        },
+        onError = {
+            Timber.e("auth failed: ${it.message.orEmpty()}")
+        }
+    )
 }

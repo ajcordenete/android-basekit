@@ -32,5 +32,34 @@ class AuthRepositoryImpl @Inject constructor(
         }
     }
 
+    override suspend fun register(
+        firstName: String,
+        lastName: String,
+        fullName: String,
+        email: String,
+        password: String
+    ): Result<Pair<User, AccessToken>> {
+        val result = authRemoteSource.register(
+            firstName,
+            lastName,
+            fullName,
+            email,
+            password
+        )
+
+        return if(result.isSuccess) {
+            val authData = result.get()
+
+            Result.success(
+                Pair(
+                    authData.first.asDomain(),
+                    authData.second.asDomain()
+                )
+            )
+        } else {
+            Result.failure(result.error())
+        }
+    }
+
 
 }

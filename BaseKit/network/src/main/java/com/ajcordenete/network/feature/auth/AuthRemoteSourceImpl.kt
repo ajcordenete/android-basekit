@@ -41,4 +41,40 @@ class AuthRemoteSourceImpl@Inject constructor(
         }
     }
 
+    override suspend fun register(
+        firstName: String,
+        lastName: String,
+        fullName: String,
+        email: String,
+        password: String
+    ): Result<Pair<UserDTO, AccessTokenDTO>> {
+        val registerBody = JsonObject()
+            .apply {
+                if (email.isNotEmpty()) addProperty("first_name", firstName)
+                if (email.isNotEmpty()) addProperty("last_name", lastName)
+                if (email.isNotEmpty()) addProperty("full_name", fullName)
+                if (email.isNotEmpty()) addProperty("email", email)
+                if (password.isNotEmpty()) addProperty("password", password)
+            }
+
+        val requestBody = getJsonRequestBody(registerBody.toString())
+
+        return try {
+            val response = apiService.register(requestBody)
+            val user = response.data.user
+            val accessToken = AccessTokenDTO(response.data.accessToken, response.data.refreshToken)
+            Result.success(
+                Pair(
+                    user,
+                    accessToken
+                )
+            )
+        } catch (e: Exception) {
+            Result.failure(
+                ErrorHandler.handleError(e)
+            )
+        }
+    }
+
+
 }
