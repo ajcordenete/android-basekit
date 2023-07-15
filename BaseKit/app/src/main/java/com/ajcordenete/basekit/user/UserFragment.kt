@@ -26,7 +26,7 @@ class UserFragment: BaseFragment<FragmentUserBinding>() {
         setUpToolbar()
         setUpVmObserver()
 
-        viewModel.getUsersFlow()
+        //viewModel.getUsersFlow()
     }
 
     private fun setUpToolbar() {

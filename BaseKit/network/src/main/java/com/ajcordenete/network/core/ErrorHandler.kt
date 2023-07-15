@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import retrofit2.HttpException
 import java.io.IOException
 import com.ajcordenete.domain.core.Error
+import com.ajcordenete.network.core.response.BaseErrorResponse
 import timber.log.Timber
 
 class ErrorHandler {
@@ -24,9 +25,7 @@ class ErrorHandler {
 
                     Error(
                         message,
-                        error,
-                        errorResponse.errorCode,
-                        gson.toJson(errorResponse.meta)
+                        error
                     )
                 }
                 is IOException -> {

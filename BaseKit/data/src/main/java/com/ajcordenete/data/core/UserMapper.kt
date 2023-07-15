@@ -7,7 +7,9 @@ import com.ajcordenete.network.feature.user.models.UserDTO
 fun User.asEntity(): UserDB {
     this.apply {
         return UserDB(
-            uid = uid,
+            id = id,
+            firstName = firstName,
+            lastName = lastName,
             fullName = fullName,
             email = email
         )
@@ -17,7 +19,9 @@ fun User.asEntity(): UserDB {
 fun UserDB.asDomain(): User {
     this.apply {
         return User(
-            uid = uid,
+            id = id,
+            firstName = firstName.orEmpty(),
+            lastName = lastName.orEmpty(),
             fullName = fullName.orEmpty(),
             email = email.orEmpty()
         )
@@ -27,8 +31,10 @@ fun UserDB.asDomain(): User {
 fun User.asDTO(): UserDTO {
     this.apply {
         return UserDTO(
-            uid = uid,
-            name = fullName,
+            id = id,
+            firstName = firstName,
+            lastName = lastName,
+            fullName = fullName,
             email = email
         )
     }
@@ -37,9 +43,11 @@ fun User.asDTO(): UserDTO {
 fun UserDTO.asDomain(): User {
     this.apply {
         return User(
-            uid = uid,
-            fullName = name,
-            email = email
+            id = id ?: 0L,
+            firstName = firstName.orEmpty(),
+            lastName = lastName.orEmpty(),
+            fullName = fullName.orEmpty(),
+            email = email.orEmpty()
         )
     }
 }

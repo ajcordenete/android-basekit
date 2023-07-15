@@ -1,9 +1,12 @@
 package com.ajcordenete.data
 
+import com.ajcordenete.data.feature.auth.AuthRepository
+import com.ajcordenete.data.feature.auth.AuthRepositoryImpl
 import com.ajcordenete.data.feature.user.UserRepository
 import com.ajcordenete.data.feature.user.UserRepositoryImpl
-import com.ajcordenete.persistence.features.user.UserLocalSource
+import com.ajcordenete.network.feature.auth.AuthRemoteSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
+import com.ajcordenete.persistence.features.user.UserLocalSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,5 +27,13 @@ class RepositoryModule {
             userRemoteSource,
             userLocalSource
         )
+    }
+
+    @Provides
+    @Singleton
+    fun providesAuthRepository(
+        authRemoteSource: AuthRemoteSource
+    ): AuthRepository {
+        return AuthRepositoryImpl(authRemoteSource)
     }
 }

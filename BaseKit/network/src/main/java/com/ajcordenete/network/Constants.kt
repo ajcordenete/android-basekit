@@ -1,9 +1,9 @@
 package com.ajcordenete.network
 
-const val BASE_URL = "https://jsonplaceholder.typicode.com"
+const val BASE_URL = "http://141.147.180.186:8080"
 const val API = "api"
 const val VERSION = "v1"
-const val ENDPOINT_FORMAT = "%s/%s/%s/"
+const val ENDPOINT_FORMAT = "%s/%s/"
 
 const val HTTP_UNPROCESSABLE_ENTITY = 422
 

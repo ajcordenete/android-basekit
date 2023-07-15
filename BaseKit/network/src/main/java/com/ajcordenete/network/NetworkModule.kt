@@ -95,7 +95,7 @@ class NetworkModule {
     @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(String.format(ENDPOINT_FORMAT, BASE_URL, API, VERSION))
+            .baseUrl(String.format(ENDPOINT_FORMAT, BASE_URL, API))
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
