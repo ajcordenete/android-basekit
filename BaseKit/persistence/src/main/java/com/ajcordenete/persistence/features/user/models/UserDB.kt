@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = UserDB.USER_TABLE_NAME)
 data class UserDB(
     @PrimaryKey
-    var id: Long = 0L,
+    var id: String = "",
 
     @ColumnInfo("first_name")
     val firstName: String? = "",

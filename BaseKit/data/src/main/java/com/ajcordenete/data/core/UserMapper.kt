@@ -43,7 +43,7 @@ fun User.asDTO(): UserDTO {
 fun UserDTO.asDomain(): User {
     this.apply {
         return User(
-            id = id ?: 0L,
+            id = id.orEmpty(),
             firstName = firstName.orEmpty(),
             lastName = lastName.orEmpty(),
             fullName = fullName.orEmpty(),
