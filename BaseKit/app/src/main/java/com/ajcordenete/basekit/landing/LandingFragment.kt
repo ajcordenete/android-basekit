@@ -43,7 +43,7 @@ class LandingFragment: BaseFragment<FragmentLandingBinding>() {
         when(state) {
             is LandingState.UserIsLoggedIn -> {
                 navigate(
-                    MainGraphDirections.actionGlobalToAuthGraph()
+                    LandingFragmentDirections.actionFragmentLandingToFragmentHome()
                 )
             }
             is LandingState.UserIsNotLoggedIn -> {

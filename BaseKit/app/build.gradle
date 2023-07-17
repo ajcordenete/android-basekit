@@ -39,13 +39,13 @@ android {
     buildFeatures {
         dataBinding true
     }
-    dynamicFeatures = [':authentication']
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":data")
     implementation project(':core')
+    implementation project(':authentication')
 
     implementation Libs.splashScreen
 

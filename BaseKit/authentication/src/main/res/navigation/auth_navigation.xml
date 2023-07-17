@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@id/authNav"
+    android:id="@+id/authNav"
     app:moduleName="authentication"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/authLandingFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.ajcordenete.authentication.login.LoginFragment"
         android:label="LoginFragment" />
+
+    <fragment
+        android:id="@+id/authLandingFragment"
+        android:name="com.ajcordenete.authentication.landing.AuthLandingFragment"
+        android:label="AuthLandingFragment" />
 </navigation>

@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.dynamic-feature'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-android'
@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-    implementation project(":app")
     implementation project(":core")
     implementation project(":data")
 
@@ -61,7 +60,6 @@ dependencies {
     implementation Libs.coreKtx
     implementation Libs.activityKtx
     implementation Libs.appCompat
-
 
     // Testing
     testImplementation TestLibs.junit

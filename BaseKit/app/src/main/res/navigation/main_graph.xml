@@ -4,10 +4,16 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/fragmentLanding">
 
+    <include app:graph="@navigation/auth_navigation" />
+
     <fragment
         android:id="@+id/fragmentLanding"
         android:name="com.ajcordenete.basekit.landing.LandingFragment"
-        android:label="Landing"/>
+        android:label="Landing">
+        <action
+            android:id="@+id/action_fragmentLanding_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentHome"
@@ -38,10 +44,4 @@
         app:exitAnim="@anim/anim_slide_out_top"
         app:popEnterAnim="@anim/anim_slide_in_deep_top"
         app:popExitAnim="@anim/anim_slide_out_bottom"/>
-
-    <include-dynamic
-        android:id="@+id/authNav"
-        app:moduleName="authentication"
-        app:graphResName="auth_navigation"
-        app:graphPackage="com.ajcordenete.basekit.authentication" />
 </navigation>
