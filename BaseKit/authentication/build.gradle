@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.dynamic-feature'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-android'
@@ -7,18 +7,15 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
 }
-
 android {
-    namespace 'com.ajcordenete.basekit'
-    compileSdk Android.compileSdkVersion
+    namespace 'com.ajcordenete.authentication'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.ajcordenete.basekit"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
         versionCode Android.versionCode
         versionName Android.versionName
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,6 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -39,15 +37,12 @@ android {
     buildFeatures {
         dataBinding true
     }
-    dynamicFeatures = [':authentication']
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(":app")
+    implementation project(":core")
     implementation project(":data")
-    implementation project(':core')
-
-    implementation Libs.splashScreen
 
     //Hilt
     implementation Libs.hiltAndroid
@@ -63,12 +58,10 @@ dependencies {
     // Testing Navigation
     androidTestImplementation Libs.navigationTesting
 
-    // Jetpack Compose Integration
-    implementation Libs.navigationCompose
+    implementation Libs.coreKtx
+    implementation Libs.activityKtx
+    implementation Libs.appCompat
 
-    // Coroutines
-    implementation Libs.coroutinesCore
-    implementation Libs.coroutinesAndroid
 
     // Testing
     testImplementation TestLibs.junit
@@ -81,9 +74,4 @@ dependencies {
     androidTestImplementation TestLibs.espresso
     androidTestImplementation TestLibs.testRules
     androidTestImplementation TestLibs.testRunner
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes true
 }

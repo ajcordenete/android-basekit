@@ -2,7 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/fragmentHome">
+    app:startDestination="@id/fragmentLanding">
+
+    <fragment
+        android:id="@+id/fragmentLanding"
+        android:name="com.ajcordenete.basekit.landing.LandingFragment"
+        android:label="Landing"/>
 
     <fragment
         android:id="@+id/fragmentHome"
@@ -13,4 +18,30 @@
         android:id="@+id/fragmentUser"
         android:name="com.ajcordenete.basekit.user.UserFragment"
         android:label="User"/>
+
+    <action
+        android:id="@+id/action_global_to_home_graph"
+        app:destination="@id/fragmentHome"
+        app:popUpTo="@id/main_graph"
+        app:popUpToInclusive="true"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_deep_left"
+        app:popExitAnim="@anim/anim_slide_out_right"/>
+
+    <action
+        android:id="@+id/action_global_to_auth_graph"
+        app:destination="@id/authNav"
+        app:popUpTo="@id/main_graph"
+        app:popUpToInclusive="true"
+        app:enterAnim="@anim/anim_slide_in_bottom"
+        app:exitAnim="@anim/anim_slide_out_top"
+        app:popEnterAnim="@anim/anim_slide_in_deep_top"
+        app:popExitAnim="@anim/anim_slide_out_bottom"/>
+
+    <include-dynamic
+        android:id="@+id/authNav"
+        app:moduleName="authentication"
+        app:graphResName="auth_navigation"
+        app:graphPackage="com.ajcordenete.basekit.authentication" />
 </navigation>
