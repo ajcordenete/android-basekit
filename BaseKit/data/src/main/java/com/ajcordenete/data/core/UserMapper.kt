@@ -51,3 +51,7 @@ fun UserDTO.asDomain(): User {
         )
     }
 }
+
+fun User.isEmpty(): Boolean {
+    return id.isEmpty() && email.isEmpty()
+}

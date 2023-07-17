@@ -1,6 +1,8 @@
 package com.ajcordenete.persistence
 
 import android.app.Application
+import com.ajcordenete.persistence.features.session.SessionLocalSource
+import com.ajcordenete.persistence.features.session.SessionLocalSourceImpl
 import com.ajcordenete.persistence.features.token.AccessTokenLocalSource
 import com.ajcordenete.persistence.features.token.AccessTokenLocalSourceImpl
 import com.ajcordenete.persistence.features.user.UserLocalSource
@@ -31,5 +33,17 @@ class DatabaseModule {
     @Singleton
     fun providesTokenLocalSource(appDatabase: AppDatabase): AccessTokenLocalSource {
         return AccessTokenLocalSourceImpl(appDatabase.tokenDao())
+    }
+
+    @Provides
+    @Singleton
+    fun providesSessionLocalSource(
+        userLocalSource: UserLocalSource,
+        tokenLocalSource: AccessTokenLocalSource
+    ): SessionLocalSource {
+        return SessionLocalSourceImpl(
+            userLocalSource,
+            tokenLocalSource
+        )
     }
 }

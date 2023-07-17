@@ -1,15 +1,20 @@
 package com.ajcordenete.data.feature.auth
 
 import com.ajcordenete.data.core.asDomain
+import com.ajcordenete.data.core.asEntity
 import com.ajcordenete.domain.error
 import com.ajcordenete.domain.get
 import com.ajcordenete.domain.models.AccessToken
+import com.ajcordenete.domain.models.Session
 import com.ajcordenete.domain.models.User
 import com.ajcordenete.network.feature.auth.AuthRemoteSource
+import com.ajcordenete.persistence.features.session.SessionLocalSource
+import com.ajcordenete.persistence.features.session.models.SessionDB
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(
-    private val authRemoteSource: AuthRemoteSource
+    private val authRemoteSource: AuthRemoteSource,
+    private val sessionLocalSource: SessionLocalSource
 ): AuthRepository {
 
     override suspend fun login(
@@ -21,12 +26,14 @@ class AuthRepositoryImpl @Inject constructor(
         return if(result.isSuccess) {
             val authData = result.get()
 
-            Result.success(
-                Pair(
-                    authData.first.asDomain(),
-                    authData.second.asDomain()
-                )
+            val resultPair = Pair(
+                authData.first.asDomain(),
+                authData.second.asDomain()
             )
+
+            saveAuthDataToSession(resultPair)
+
+            Result.success(resultPair)
         } else {
             Result.failure(result.error())
         }
@@ -50,15 +57,24 @@ class AuthRepositoryImpl @Inject constructor(
         return if(result.isSuccess) {
             val authData = result.get()
 
-            Result.success(
-                Pair(
-                    authData.first.asDomain(),
-                    authData.second.asDomain()
-                )
+            val resultPair = Pair(
+                authData.first.asDomain(),
+                authData.second.asDomain()
             )
+
+            saveAuthDataToSession(resultPair)
+
+            Result.success(resultPair)
         } else {
             Result.failure(result.error())
         }
+    }
+
+    private suspend fun saveAuthDataToSession(pair: Pair<User, AccessToken>): Session {
+        val session = Session(pair.first, pair.second)
+        sessionLocalSource.saveSession(session.asEntity())
+
+        return session
     }
 
 

@@ -29,15 +29,6 @@ class HomeViewModel @Inject constructor(
         action = {
             val result = authRepository.login("jk@gmail.com", "password")
             if(result.isSuccess) {
-                val resultPair = result.get()
-                Timber.i("auth: $resultPair")
-                sessionRepository.saveSession(
-                    Session(
-                        resultPair.first,
-                        resultPair.second
-                    )
-                )
-
                 val session = sessionRepository.getSession()
                 Timber.i("auth session: $session")
 
@@ -57,17 +48,20 @@ class HomeViewModel @Inject constructor(
                 firstName = "hey",
                 lastName = "yo",
                 fullName = "this",
-                email = "toy@gmail.com",
+                email = "toy4@gmail.com",
                 password = "password"
             )
             if(result.isSuccess) {
                 Timber.i("auth: ${result.get()}")
+                val session = sessionRepository.getSession()
+                Timber.i("auth session: $session")
             } else if(result.isFailure) {
                 Timber.i("auth failed: ${result.error()}")
             }
         },
         onError = {
             Timber.e("auth failed: ${it.message.orEmpty()}")
-        }
+        },
+        dispatcher = dispatchers.io()
     )
 }

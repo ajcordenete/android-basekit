@@ -30,3 +30,7 @@ fun AccessToken.asEntity(): AccessTokenDB {
         )
     }
 }
+
+fun AccessToken.isEmpty(): Boolean {
+    return accessToken.isEmpty() && refreshToken.isEmpty()
+}

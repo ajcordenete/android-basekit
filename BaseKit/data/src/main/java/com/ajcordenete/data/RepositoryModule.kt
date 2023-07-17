@@ -8,6 +8,7 @@ import com.ajcordenete.data.feature.user.UserRepository
 import com.ajcordenete.data.feature.user.UserRepositoryImpl
 import com.ajcordenete.network.feature.auth.AuthRemoteSource
 import com.ajcordenete.network.feature.user.UserRemoteSource
+import com.ajcordenete.persistence.features.session.SessionLocalSource
 import com.ajcordenete.persistence.features.token.AccessTokenLocalSource
 import com.ajcordenete.persistence.features.user.UserLocalSource
 import dagger.Module
@@ -34,17 +35,17 @@ class RepositoryModule {
     @Provides
     @Singleton
     fun providesAuthRepository(
-        authRemoteSource: AuthRemoteSource
+        authRemoteSource: AuthRemoteSource,
+        sessionLocalSource: SessionLocalSource
     ): AuthRepository {
-        return AuthRepositoryImpl(authRemoteSource)
+        return AuthRepositoryImpl(authRemoteSource, sessionLocalSource)
     }
 
     @Provides
     @Singleton
     fun providesSessionRepository(
-        userLocalSource: UserLocalSource,
-        tokenLocalSource: AccessTokenLocalSource
+        sessionLocalSource: SessionLocalSource
     ): SessionRepository {
-        return SessionRepositoryImpl(userLocalSource, tokenLocalSource)
+        return SessionRepositoryImpl(sessionLocalSource)
     }
 }
