@@ -13,5 +13,9 @@
     <fragment
         android:id="@+id/authLandingFragment"
         android:name="com.ajcordenete.authentication.landing.AuthLandingFragment"
-        android:label="AuthLandingFragment" />
+        android:label="AuthLandingFragment" >
+        <action
+            android:id="@+id/action_authLandingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
