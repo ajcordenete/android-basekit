@@ -17,5 +17,12 @@
         <action
             android:id="@+id/action_authLandingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_authLandingFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ajcordenete.authentication.register.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>

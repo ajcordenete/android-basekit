@@ -4,8 +4,16 @@
     <string name="register">Register</string>
     <string name="welcome_back">Welcome back! Glad to see you again</string>
     <string name="register_to_get_started">Hello! Register to get started</string>
+    <string name="enter_your_name">Enter your name</string>
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_password">Enter your password</string>
+    <string name="confirm_your_password">Confirm your password</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
     <string name="register_now">Register now</string>
+
+    <string name="invalid_name">Name should not be empty</string>
+    <string name="invalid_email">Please use a valid email address</string>
+    <string name="invalid_password">Password should be at least 6 characters long</string>
+    <string name="invalid_match_password">Passwords does not match</string>
 </resources>

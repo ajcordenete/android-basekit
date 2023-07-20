@@ -33,7 +33,10 @@ class AuthLandingFragment: BaseFragment<FragmentAuthLandingBinding>() {
         binding
             .btnRegister
             .ninjaTap {
-
+                navigate(
+                    AuthLandingFragmentDirections
+                        .actionAuthLandingFragmentToRegisterFragment()
+                )
             }
             .launchIn(lifecycleScope)
     }
