@@ -12,5 +12,9 @@ sealed class RegisterUiState {
 
     object PasswordsDoesNotMatch: RegisterUiState()
 
+    object ShowLoading: RegisterUiState()
+
+    object HideLoading: RegisterUiState()
+
     data class ShowError(val message: String): RegisterUiState()
 }

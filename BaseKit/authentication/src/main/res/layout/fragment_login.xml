@@ -11,6 +11,11 @@
             android:id="@+id/toolbar"
             layout="@layout/include_top_appbar_main_large" />
 
+        <include
+            android:id="@+id/loading"
+            layout="@layout/include_progress_loader"
+            android:visibility="gone"/>
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLeft"
             android:layout_width="wrap_content"
@@ -62,8 +67,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_regular"
-                android:imeOptions="actionGo"
-                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
                 android:maxLines="1">
 
                 <requestFocus />

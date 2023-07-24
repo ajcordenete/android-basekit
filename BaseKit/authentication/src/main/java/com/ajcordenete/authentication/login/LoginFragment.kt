@@ -2,14 +2,22 @@ package com.ajcordenete.authentication.login
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.net.toUri
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.ajcordenete.authentication.R
 import com.ajcordenete.authentication.databinding.FragmentLoginBinding
 import com.ajcordenete.core.base.BaseFragment
+import com.ajcordenete.core.ext.gone
+import com.ajcordenete.core.ext.navigate
 import com.ajcordenete.core.ext.ninjaTap
+import com.ajcordenete.core.ext.visible
+import com.ajcordenete.core.utils.AppRoutes
 import com.ajcordenete.core.utils.ViewUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
@@ -48,6 +56,13 @@ class LoginFragment: BaseFragment<FragmentLoginBinding>() {
                 )
             }
             .launchIn(lifecycleScope)
+
+        binding
+            .txtRegisterNow
+            .ninjaTap {
+                navigateToRegister()
+            }
+            .launchIn(lifecycleScope)
     }
 
     private fun setUpVmObserver() {
@@ -64,17 +79,19 @@ class LoginFragment: BaseFragment<FragmentLoginBinding>() {
     private fun handleState(state: LoginUiState) {
         when(state) {
             is LoginUiState.LoginSuccessful -> {
-                ViewUtils.showGenericSuccessSnackBar(
-                    binding.root,
-                    getString(R.string.login)
-                )
-                Timber.i("login success")
+                navigateToHome()
             }
             is LoginUiState.InvalidEmail -> {
                 binding.inputLayoutUsername.error = getString(com.ajcordenete.core.R.string.invalid_email)
             }
             is LoginUiState.InvalidPassword-> {
                 binding.inputLayoutPassword.error = getString(com.ajcordenete.core.R.string.invalid_password)
+            }
+            is LoginUiState.ShowLoading -> {
+                binding.loading.visible()
+            }
+            is LoginUiState.HideLoading -> {
+                binding.loading.gone()
             }
             is LoginUiState.ShowError -> {
                 ViewUtils.showGenericErrorSnackBar(binding.root, state.message)
@@ -85,5 +102,29 @@ class LoginFragment: BaseFragment<FragmentLoginBinding>() {
     private fun resetErrors() {
         binding.inputLayoutUsername.error = ""
         binding.inputLayoutPassword.error = ""
+    }
+
+    private fun navigateToHome() {
+        val request = NavDeepLinkRequest.Builder
+            .fromUri(AppRoutes.Main.Deeplink.HOME)
+            .build()
+        findNavController()
+            .navigate(
+                request,
+                NavOptions
+                    .Builder()
+                    .setPopUpTo(
+                        R.id.authNav,
+                        true
+                    )
+                    .build()
+            )
+    }
+
+    private fun navigateToRegister() {
+        navigate(
+            LoginFragmentDirections
+                .actionLoginFragmentToRegisterFragment()
+        )
     }
 }

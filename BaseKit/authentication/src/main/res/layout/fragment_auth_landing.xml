@@ -8,11 +8,12 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scaleType="centerInside"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/imgLogo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/image_landing"/>
+            android:src="@drawable/img_auth_landing"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgLogo"

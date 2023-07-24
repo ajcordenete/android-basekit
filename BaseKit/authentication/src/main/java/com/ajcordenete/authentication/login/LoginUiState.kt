@@ -10,5 +10,9 @@ sealed class LoginUiState {
 
     object InvalidPassword: LoginUiState()
 
+    object ShowLoading: LoginUiState()
+
+    object HideLoading: LoginUiState()
+
     data class ShowError(val message: String): LoginUiState()
 }

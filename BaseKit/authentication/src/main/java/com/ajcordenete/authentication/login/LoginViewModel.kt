@@ -30,6 +30,8 @@ class LoginViewModel @Inject constructor(
             if(!validate(email, password))
                 return@launch
 
+            _uiState.emit(LoginUiState.ShowLoading)
+
             val result = authRepository.login(email, password)
 
             if(result.isSuccess) {
@@ -40,11 +42,12 @@ class LoginViewModel @Inject constructor(
                     LoginUiState.ShowError(result.error().message.orEmpty())
                 )
             }
+            _uiState.emit(LoginUiState.HideLoading)
         },
         onError = {
-            _uiState.emit(
-                LoginUiState.ShowError(it.message.orEmpty())
-            )
+            _uiState.emit(LoginUiState.HideLoading)
+
+            _uiState.emit(LoginUiState.ShowError(it.message.orEmpty()))
         },
         dispatcher = dispatchers.io()
     )

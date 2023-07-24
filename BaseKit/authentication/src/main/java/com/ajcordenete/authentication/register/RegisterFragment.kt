@@ -2,15 +2,24 @@ package com.ajcordenete.authentication.register
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.net.toUri
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.NavOptions
+import androidx.navigation.NavOptionsBuilder
+import androidx.navigation.fragment.findNavController
 import com.ajcordenete.authentication.R
 import com.ajcordenete.authentication.databinding.FragmentRegisterBinding
 import com.ajcordenete.authentication.login.LoginUiState
 import com.ajcordenete.core.base.BaseFragment
+import com.ajcordenete.core.ext.gone
+import com.ajcordenete.core.ext.navigate
 import com.ajcordenete.core.ext.ninjaTap
+import com.ajcordenete.core.ext.visible
+import com.ajcordenete.core.utils.AppRoutes
 import com.ajcordenete.core.utils.ViewUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
@@ -51,6 +60,13 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>() {
                 )
             }
             .launchIn(lifecycleScope)
+
+        binding
+            .txtLoginNow
+            .ninjaTap {
+                navigateToLogin()
+            }
+            .launchIn(lifecycleScope)
     }
 
     private fun setUpVmObserver() {
@@ -67,11 +83,7 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>() {
     private fun handleState(state: RegisterUiState) {
         when(state) {
             is RegisterUiState.RegisterSuccessful -> {
-                ViewUtils.showGenericSuccessSnackBar(
-                    binding.root,
-                    getString(R.string.register)
-                )
-                Timber.i("register success")
+                navigateToHome()
             }
             is RegisterUiState.InvalidName -> {
                 binding.inputLayoutName.error = getString(R.string.invalid_name)
@@ -85,6 +97,12 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>() {
             is RegisterUiState.PasswordsDoesNotMatch -> {
                 binding.inputLayoutConfirmPassword.error = getString(R.string.invalid_match_password)
             }
+            is RegisterUiState.ShowLoading -> {
+                binding.loading.visible()
+            }
+            is RegisterUiState.HideLoading -> {
+                binding.loading.gone()
+            }
             is RegisterUiState.ShowError -> {
                 ViewUtils.showGenericErrorSnackBar(binding.root, state.message)
             }
@@ -96,5 +114,29 @@ class RegisterFragment: BaseFragment<FragmentRegisterBinding>() {
         binding.inputLayoutEmail.error = ""
         binding.inputLayoutPassword.error = ""
         binding.inputLayoutConfirmPassword.error = ""
+    }
+
+    private fun navigateToHome() {
+        val request = NavDeepLinkRequest.Builder
+            .fromUri(AppRoutes.Main.Deeplink.HOME)
+            .build()
+        findNavController()
+            .navigate(
+                request,
+                NavOptions
+                    .Builder()
+                    .setPopUpTo(
+                        R.id.authNav,
+                        true
+                    )
+                    .build()
+            )
+    }
+
+    private fun navigateToLogin() {
+        navigate(
+            RegisterFragmentDirections
+                .actionRegisterFragmentToLoginFragment()
+        )
     }
 }

@@ -33,6 +33,8 @@ class RegisterViewModel @Inject constructor(
             if(!validate(fullName, email, password, confirmPassword))
                 return@launch
 
+            _uiState.emit(RegisterUiState.ShowLoading)
+
             val result = authRepository
                 .register(
                     email = email,
@@ -50,8 +52,10 @@ class RegisterViewModel @Inject constructor(
                     RegisterUiState.ShowError(result.error().message.orEmpty())
                 )
             }
+            _uiState.emit(RegisterUiState.HideLoading)
         },
         onError = {
+            _uiState.emit(RegisterUiState.HideLoading)
             _uiState.emit(
                 RegisterUiState.ShowError(it.message.orEmpty())
             )

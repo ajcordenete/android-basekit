@@ -13,12 +13,19 @@
         <action
             android:id="@+id/action_fragmentLanding_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+
+        <deepLink
+            app:uri="basekit://com.ajcordenete.basekit/landing" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.ajcordenete.basekit.home.FragmentHome"
-        android:label="Home"/>
+        android:label="Home">
+
+        <deepLink
+            app:uri="basekit://com.ajcordenete.basekit/home" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentUser"

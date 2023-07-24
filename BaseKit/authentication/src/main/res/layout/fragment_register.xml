@@ -11,6 +11,11 @@
             android:id="@+id/toolbar"
             layout="@layout/include_top_appbar_main_large" />
 
+        <include
+            android:id="@+id/loading"
+            layout="@layout/include_progress_loader"
+            android:visibility="gone"/>
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLeft"
             android:layout_width="wrap_content"
@@ -87,7 +92,7 @@
                 style="@style/Styles.Input.TextInputEditText.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:imeOptions="actionGo"
+                android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLines="1">
             </com.google.android.material.textfield.TextInputEditText>
@@ -111,7 +116,7 @@
                 style="@style/Styles.Input.TextInputEditText.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:imeOptions="actionDone"
+                android:imeOptions="actionNext"
                 android:inputType="textPassword"
                 android:maxLines="1">
             </com.google.android.material.textfield.TextInputEditText>
